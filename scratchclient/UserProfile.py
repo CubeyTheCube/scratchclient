@@ -1,4 +1,5 @@
 import requests
+import json
 
 
 class UserProfile:
