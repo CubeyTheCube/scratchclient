@@ -1,4 +1,5 @@
 import requests
+import json
 
 from .ScratchExceptions import UnauthorizedException
 from .Project import Project
