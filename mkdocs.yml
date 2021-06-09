@@ -1,0 +1,7 @@
+theme:
+  name: material
+  palette:
+    primary: light blue
+    
+ plugins:
+  - search
