@@ -5,6 +5,7 @@ from .ScratchExceptions import UnauthorizedException
 from .Project import Project
 from .UserProfile import UserProfile
 
+dict_merge = lambda a,b: a.update(b) or a
 
 class User:
     def __init__(self, data, client):
@@ -42,12 +43,16 @@ class User:
                 if len(res) != 40:
                     break
                 offset += 40
+            projects.update({
+              "author": self.username
+            })
             return list(map(self._client._to_project, projects))
         else:
             return list(
                 map(
                     self._client._to_project,
-                    requests.get(
+                    dict_merge(
+                      requests.get(
                         "https://api.scratch.mit.edu/users/"
                         + self.username
                         + "/projects/"
@@ -55,7 +60,10 @@ class User:
                         + str(limit)
                         + "&offset="
                         + str(offset)
-                    ).json(),
+                      ).json(),
+                    {
+                      "author": self.username
+                    }),
                 )
             )
 
@@ -108,12 +116,16 @@ class User:
                 if len(res) != 40:
                     break
                 offset += 40
+            projects.update({
+              "author": self.username
+            })
             return list(map(self._client._to_project, projects))
         else:
             return list(
                 map(
                     self._client._to_project,
-                    requests.get(
+                    dict_merge(
+                      requests.get(
                         "https://api.scratch.mit.edu/users/"
                         + self.username
                         + "/favorites/"
@@ -121,7 +133,10 @@ class User:
                         + str(limit)
                         + "&offset="
                         + str(offset)
-                    ).json(),
+                      ).json(),
+                    {
+                      "author": self.username
+                    })
                 )
             )
 

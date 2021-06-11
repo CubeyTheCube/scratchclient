@@ -102,7 +102,7 @@ class CloudConnection(EventEmitter):
                 for cloud in self._cloudvariables:
                     if response["name"] == cloud.name:
                         cloud.value = response["value"]
-                        self.cloud.emit("set", cloud)
+                        self.emit("set", cloud)
 
             else:
                 self.connect()

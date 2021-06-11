@@ -15,7 +15,7 @@ class Project:
         self.visible = data["visibility"] == "visible"
         self.public = data["public"]
         self.comments_allowed = data["comments_allowed"]
-        self.is_published = data["is_published"]
+        self.is_published = data["is_published"]        
         self.author = IncompleteUser(data["author"])
         self.thumbnail_URL = data["image"]
 
@@ -308,7 +308,7 @@ class Project:
         if self.author.username != self._client.username:
             raise UnauthorizedException("You are not allowed to do that")
         image = open(file, "rb")
-        request.post(
+        requests.post(
             "https://scratch.mit.edu/internalapi/project/thumbnail/"
             + str(self.id)
             + "/set/",
