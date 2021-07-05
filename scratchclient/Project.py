@@ -315,3 +315,14 @@ class Project:
             data=image.read(),
             headers=self._headers,
         )
+
+    def set_title(self, title):
+        if self.author.username != self._client.username:
+            raise UnauthorizedException("You are not allowed to do that")
+        data = { "title": title }
+        requests.put(
+            "https://api.scratch.mit.edu/projects/"
+            + str(self.id),
+            data=json.dumps(data),
+            headers=self._json_headers,
+        )
