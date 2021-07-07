@@ -88,7 +88,7 @@ class ScratchSession:
             map(self._to_news, requests.get("https://api.scratch.mit.edu/news/").json())
         )
 
-    def get_messages(self, all=False, limit=20, offset=0):
+    def get_messages(self, all=False, limit=20, offset=0, filter="all"):
         headers = {
             "x-csrftoken": self.csrf_token,
             "X-Token": self.token,
@@ -109,8 +109,9 @@ class ScratchSession:
                     + self.username
                     + "/messages/"
                     + "?limit=40&offset="
-                    + str(offset),
-                    headers=headers,
+                    + str(offset)
+                    + "&filter="+ str(filter),
+                    headers=headeyrs,
                 ).json()
                 messages += res
                 if len(res) != 40:
@@ -128,7 +129,8 @@ class ScratchSession:
                         + "?limit="
                         + str(limit)
                         + "&offset="
-                        + str(offset),
+                        + str(offset)
+                        + "&filter="+ str(filter),
                         headers=headers,
                     ).json(),
                 )
