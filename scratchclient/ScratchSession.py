@@ -111,7 +111,7 @@ class ScratchSession:
                     + "?limit=40&offset="
                     + str(offset)
                     + "&filter="+ str(filter),
-                    headers=headeyrs,
+                    headers=headers,
                 ).json()
                 messages += res
                 if len(res) != 40:
