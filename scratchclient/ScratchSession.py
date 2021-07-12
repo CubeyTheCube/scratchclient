@@ -117,7 +117,7 @@ class ScratchSession:
                 if len(res) != 40:
                     break
                 offset += 40
-            return list(map(self._to_message, studios))
+            return list(map(self._to_message, messages))
         else:
             return list(
                 map(
