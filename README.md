@@ -3,6 +3,19 @@ A scratch API wrapper for python.
 
 Based off of https://github.com/edqx/node-scratch-client, and [ilcheese2](https://scratch.mit.edu/users/ilcheese2/)'s cloud code based on my own. 
 
+## Installation
+
+Go to your terminal (not your python shell) and execute this command:
+```bash
+pip install scratchclient
+```
+
+If you want cloud variables to run faster, use this command:
+```bash
+pip install scratchclient[fast]
+```
+Note that to do this, you need to install [Visual C++ 14.0](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
+
 ## Example usage
 
 ### Basic usage:
