@@ -16,7 +16,7 @@ class UserProfile:
         data = {"bio": content}
         return requests.put(
             "https://scratch.mit.edu/site-api/users/all/" + self.username + "/",
-            data=data,
+            data=json.dumps(data),
             headers=self.user._headers,
         )
 
@@ -24,7 +24,7 @@ class UserProfile:
         data = {"status": content}
         return requests.put(
             "https://scratch.mit.edu/site-api/users/all/" + self.username + "/",
-            data=data,
+            data=json.dumps(data),
             headers=self.user._headers,
         )
 
