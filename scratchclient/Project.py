@@ -28,7 +28,7 @@ class Project:
         self.favorite_count = data["stats"]["favorites"]
         self.remix_count = data["stats"]["remixes"]
 
-        self.parent = data["remix"]["parent"]
+        self.parent = data["remix"].get("parent")
         self.root = data["remix"]["root"]
         self.is_remix = bool(self.parent)
 
