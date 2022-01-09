@@ -9,7 +9,7 @@ class Studio:
     def __init__(self, data, client):
         self.id = data["id"]
         self.title = data["title"]
-        self.owner = data["owner"]
+        self.host = data["host"]
         self.description = data["description"]
         self.thumbnail_URL = data["image"]
         self.visible = data["visibility"] == "visibile"
