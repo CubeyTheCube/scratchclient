@@ -138,8 +138,8 @@ class ScratchSession:
 
     def create_cloud_connection(self, project_id):
         return CloudConnection(project_id, self)
-
-    def explore_projects(self, mode="trending", query="*"):
+    
+    def explore_projects(self, mode="trending", query="*", language="en"):
         return list(
             map(
                 self._to_project,
@@ -148,6 +148,8 @@ class ScratchSession:
                     + mode
                     + "&q="
                     + query
+                    +"&language="
+                    +language
                 ).json(),
             )
         )
