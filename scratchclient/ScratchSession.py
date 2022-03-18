@@ -14,11 +14,12 @@ from .ProjectComment import ProjectComment
 
 
 class ScratchSession:
-    def __init__(self, username, password):
+    def __init__(self, username: str, password: str):
+        """ Authenticate and login to scratch and provide access to the API """
         self.username = username
         self.login(password)
 
-    def login(self, password):
+    def login(self, password: str):
         # logs in to Scratch
         headers = {
             "x-csrftoken": "a",
@@ -65,30 +66,35 @@ class ScratchSession:
     def _to_message(self, data):
         return Message(data)
 
-    def get_user(self, user):
+    def get_user(self, user: str):
+        """ Returns a user object from username """
         username = user.username if isinstance(user, IncompleteUser) else user
         return self._to_user(
             requests.get("https://api.scratch.mit.edu/users/" + username + "/").json(),
         )
 
-    def get_project(self, id):
+    def get_project(self, id: int):
+        """ Returns a project object from project id """
         return self._to_project(
             requests.get(
                 "https://api.scratch.mit.edu/projects/" + str(id) + "/"
             ).json(),
         )
 
-    def get_studio(self, id):
+    def get_studio(self, id: int):
+        """ Returns a studio object from studio id """
         return self._to_studio(
             requests.get("https://api.scratch.mit.edu/studios/" + str(id) + "/").json(),
         )
 
-    def get_news(self):
+    def get_news(self) -> list[News]:
+        """ Returns a list of news objects from the news section """
         return list(
             map(self._to_news, requests.get("https://api.scratch.mit.edu/news/").json())
         )
 
-    def get_messages(self, all=False, limit=20, offset=0, filter="all"):
+    def get_messages(self, all=False, limit=20, offset=0, filter="all") -> list[Message]:
+        """ Returns a list of message objects from user's inbox """
         headers = {
             "x-csrftoken": self.csrf_token,
             "X-Token": self.token,
@@ -136,10 +142,15 @@ class ScratchSession:
                 )
             )
 
-    def create_cloud_connection(self, project_id):
+    def create_cloud_connection(self, project_id: int):
+        """ Creates a CloudConnection from a project id """
         return CloudConnection(project_id, self)
 
-    def explore_projects(self, mode="trending", query="*"):
+    def explore_projects(self, mode="trending", query="*") -> list[Project]:
+        """
+        Returns a list of project objects from the explore/search page
+        mode can be trending (Default), popular, recent
+        """
         return list(
             map(
                 self._to_project,
@@ -152,7 +163,11 @@ class ScratchSession:
             )
         )
 
-    def explore_studios(self, mode="trending", query="*"):
+    def explore_studios(self, mode="trending", query="*") -> list[Studio]:
+        """
+        Returns a list of studio objects from the explore page
+        mode can be trending (Default), popular, recent
+        """
         return list(
             map(
                 self._to_studio,
@@ -165,7 +180,11 @@ class ScratchSession:
             )
         )
 
-    def search_projects(self, mode="popular", query="*"):
+    def search_projects(self, mode="popular", query="*") -> list[Project]:
+        """
+        Returns a list of project objects from the search page
+        mode can be trending (Default), popular, recent
+        """
         return list(
             map(
                 self._to_project,
@@ -178,7 +197,11 @@ class ScratchSession:
             )
         )
 
-    def search_studios(self, mode="popular", query="*"):
+    def search_studios(self, mode="popular", query="*") -> list[Studio]:
+        """
+        Returns a list of studio objects from the search page
+        mode can be trending (Default), popular, recent
+        """
         return list(
             map(
                 self._to_studio,

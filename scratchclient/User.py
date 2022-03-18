@@ -27,7 +27,8 @@ class User:
             "referer": "https://scratch.mit.edu/users/" + self.username + "/",
         }
 
-    def get_projects(self, all=False, limit=20, offset=0):
+    def get_projects(self, all=False, limit=20, offset=0) -> list[Project]:
+        """ Returns a list of project objects from user's shared projects """
         if all:
             projects = []
             offset = 0
@@ -67,7 +68,8 @@ class User:
                 )
             )
 
-    def get_curating(self, all=False, limit=20, offset=0):
+    def get_curating(self, all=False, limit=20, offset=0) -> list['Studio']:
+        """ Returns a list of studio objects the user is curating """
         if all:
             studios = []
             offset = 0
@@ -100,7 +102,8 @@ class User:
                 )
             )
 
-    def get_favorites(self, all=False, limit=20, offset=0):
+    def get_favorites(self, all=False, limit=20, offset=0) -> list[Project]:
+        """ Returns a list of project objects the user has favourited """
         if all:
             projects = []
             offset = 0
@@ -140,7 +143,8 @@ class User:
                 )
             )
 
-    def get_followers(self, all=False, limit=20, offset=0):
+    def get_followers(self, all=False, limit=20, offset=0) -> list['User']:
+        """ Returns a list of user objects the user is followed by """
         if all:
             users = []
             offset = 0
@@ -173,7 +177,8 @@ class User:
                 )
             )
 
-    def get_following(self, all=False, limit=20, offset=0):
+    def get_following(self, all=False, limit=20, offset=0) -> list['User']:
+        """ Return a list of user objects the user is following """
         if all:
             users = []
             offset = 0
@@ -206,12 +211,17 @@ class User:
                 )
             )
 
-    def get_message_count(self):
+    def get_message_count(self) -> int:
+        """ Returns the no. of messages in user's inbox """
         return requests.get(
             "https://api.scratch.mit.edu/users/" + self.username + "/messages/count/"
         ).json()["count"]
 
-    def post_comment(self, content, parent_id="", commentee_id=""):
+    def post_comment(self, content: str, parent_id="", commentee_id=""):
+        """
+        Post a comment on the user's profile
+        parent_id: If given post a reply to the parent comment
+        """
         data = {
             "commentee_id": commentee_id,
             "content": content,

@@ -59,7 +59,7 @@ class CloudConnection(EventEmitter):
                 )
         self._start_cloud_var_loop()
 
-    def set_cloud_variable(self, variable, value):
+    def set_cloud_variable(self, variable: str, value: str):
         if time.time() - self._timer > 0.1:
             if not str(value).isdigit():
                 raise ValueError(
@@ -113,11 +113,15 @@ class CloudConnection(EventEmitter):
                 self.connect()
 
     def _start_cloud_var_loop(self):
-        """Will start a new thread that looks for the cloud variables and appends their results onto cloudvariables"""
+        """
+        Will start a new thread that looks for the cloud variables
+        and appends their results onto cloudvariables
+        """
         thread = threading.Thread(target=self._cloud_var_loop)
         thread.start()
 
-    def get_cloud_variable(self, name):
+    def get_cloud_variable(self, name: str) -> str:
+        """ Returns value of cloud variable from cloud variable name """
         try:
             var = next(
                 x

@@ -12,7 +12,7 @@ class UserProfile:
         self.status = data["status"]
         self.country = data["country"]
 
-    def set_bio(self, content):
+    def set_bio(self, content: str):
         data = {"bio": content}
         return requests.put(
             "https://scratch.mit.edu/site-api/users/all/" + self.username + "/",
@@ -20,7 +20,7 @@ class UserProfile:
             headers=self.user._headers,
         )
 
-    def set_status(self, content):
+    def set_status(self, content: str):
         data = {"status": content}
         return requests.put(
             "https://scratch.mit.edu/site-api/users/all/" + self.username + "/",
@@ -28,7 +28,17 @@ class UserProfile:
             headers=self.user._headers,
         )
 
-    def set_featured_project(self, label, project):
+    def set_featured_project(self, label: str, project: int):
+        """
+        Set featured project to project id
+        label can be
+            featured_project,
+            featured_tutorial,
+            work_in_progress,
+            remix_this,
+            my_favorite_things,
+            why_i_scratch
+        """
         label = (
             {
                 "featured_project": "",

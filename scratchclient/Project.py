@@ -61,7 +61,8 @@ class Project:
     def _to_project_comment(self, data):
         return ProjectComment(self, data, self._client)
 
-    def get_comment(self, comment_id):
+    def get_comment(self, comment_id: int):
+        """ Returns a comment object from a comment id """
         data = requests.get(
             "https://api.scratch.mit.edu/users/"
             + self.author.username
@@ -109,12 +110,14 @@ class Project:
             headers=self._headers,
         ).json()["userFavorite"]
 
-    def get_scripts(self):
+    def get_scripts(self) -> dict:
+        """ Returns the project.json of the project as dict """
         return requests.get(
             "https://projects.scratch.mit.edu/" + str(self.id) + "/"
         ).json()
 
-    def get_remixes(self, all=False, limit=20, offset=0):
+    def get_remixes(self, all=False, limit=20, offset=0) -> list['Project']:
+        """ Returns a list of project objects of the remixes of the project """
         if all:
             projects = []
             offset = 0
@@ -147,7 +150,8 @@ class Project:
                 )
             )
 
-    def get_studios(self, all=False, limit=20, offset=0):
+    def get_studios(self, all=False, limit=20, offset=0) -> list['Studio']:
+        """ Returns a list of studio objects which the project is listed in """
         if all:
             studios = []
             offset = 0
@@ -180,7 +184,11 @@ class Project:
                 )
             )
 
-    def post_comment(self, content, parent_id="", commentee_id=""):
+    def post_comment(self, content: str, parent_id="", commentee_id=""):
+        """
+        Post a comment on the project
+        parent_id: If given post a reply to the parent
+        """
         data = {
             "commentee_id": commentee_id,
             "content": content,
@@ -192,7 +200,8 @@ class Project:
             data=json.dumps(data),
         ).json()
 
-    def get_comments(self, all=False, limit=20, offset=0):
+    def get_comments(self, all=False, limit=20, offset=0) -> list[ProjectComment]:
+        """ Returns a list of comment objects on the project """
         if all:
             comments = []
             offset = 0
@@ -295,6 +304,7 @@ class Project:
         )
 
     def view(self):
+        """ Request to "view" the project """
         requests.post(
             "https://api.scratch.mit.edu/users/"
             + self.author.username
@@ -304,7 +314,8 @@ class Project:
             headers=self._headers,
         )
 
-    def set_thumbnail(self, file):
+    def set_thumbnail(self, file: str):
+        """ Set project's thumbnail to file """
         if self.author.username != self._client.username:
             raise UnauthorizedException("You are not allowed to do that")
         image = open(file, "rb")
@@ -316,7 +327,7 @@ class Project:
             headers=self._headers,
         )
 
-    def set_title(self, title):
+    def set_title(self, title: str):
         if self.author.username != self._client.username:
             raise UnauthorizedException("You are not allowed to do that")
         data = { "title": title }
