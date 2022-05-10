@@ -21,13 +21,13 @@ class ProjectComment:
 
     def delete(self):
         requests.delete(
-            f"https://api.scratch.mit.edu/proxy/comments/project/{str(self.project.id)}/comment/{str(self.id)}",
+            f"https://api.scratch.mit.edu/proxy/comments/project/{self.project.id}/comment/{self.id}",
             headers=self.project._headers,
         )
 
     def report(self):
         requests.post(
-            f"https://api.scratch.mit.edu/proxy/comments/project/{str(self.project.id)}/comment/{str(self.id)}/report",
+            f"https://api.scratch.mit.edu/proxy/comments/project/{self.project.id}/comment/{self.id}/report",
             headers=self.project._headers,
         )
 

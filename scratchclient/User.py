@@ -20,7 +20,7 @@ class User:
             "X-Token": self._client.token,
             "x-requested-with": "XMLHttpRequest",
             "Cookie": f"scratchcsrftoken={self._client.csrf_token};scratchlanguage=en;scratchsessionsid={self._client.session_id};",
-            "referer": "https://scratch.mit.edu/users/" + self.username + "/",
+            "referer": f"https://scratch.mit.edu/users/{self.username}/",
         }
 
     def get_projects(self, all=False, limit=20, offset=0):
@@ -29,7 +29,7 @@ class User:
             offset = 0
             while True:
                 res = requests.get(
-                    f"https://api.scratch.mit.edu/users/{self.username}/projects/?limit=40&offset={str(offset)}"
+                    f"https://api.scratch.mit.edu/users/{self.username}/projects/?limit=40&offset={offset}"
                 ).json()
                 projects += res
                 if len(res) != 40:
@@ -45,7 +45,7 @@ class User:
                     self._client._to_project,
                     dict_merge(
                       requests.get(
-                        f"https://api.scratch.mit.edu/users/{self.username}/projects/?limit={str(limit)}&offset={str(offset)}"
+                        f"https://api.scratch.mit.edu/users/{self.username}/projects/?limit={limit}&offset={offset}"
                       ).json(),
                     {
                       "author": self.username
@@ -59,7 +59,7 @@ class User:
             offset = 0
             while True:
                 res = requests.get(
-                    f"https://api.scratch.mit.edu/users/{self.username}/studios/curate/?limit=40&offset={str(offset)}"
+                    f"https://api.scratch.mit.edu/users/{self.username}/studios/curate/?limit=40&offset={offset}"
                 ).json()
                 studios += res
                 if len(res) != 40:
@@ -71,7 +71,7 @@ class User:
                 map(
                     self._client._to_studio,
                     requests.get(
-                        f"https://api.scratch.mit.edu/users/{self.username}/studios/curate/?limit={str(limit)}&offset={str(offset)}"
+                        f"https://api.scratch.mit.edu/users/{self.username}/studios/curate/?limit={limit}&offset={offset}"
                     ).json(),
                 )
             )
@@ -82,7 +82,7 @@ class User:
             offset = 0
             while True:
                 res = requests.get(
-                    f"https://api.scratch.mit.edu/users/{self.username}/favorites/?limit=40&offset={str(offset)}"
+                    f"https://api.scratch.mit.edu/users/{self.username}/favorites/?limit=40&offset={offset}"
                 ).json()
                 projects += res
                 if len(res) != 40:
@@ -98,7 +98,7 @@ class User:
                     self._client._to_project,
                     dict_merge(
                       requests.get(
-                        f"https://api.scratch.mit.edu/users/{self.username}/favorites/?limit={str(limit)}&offset={str(offset)}"
+                        f"https://api.scratch.mit.edu/users/{self.username}/favorites/?limit={limit}&offset={offset}"
                       ).json(),
                     {
                       "author": self.username
@@ -112,7 +112,7 @@ class User:
             offset = 0
             while True:
                 res = requests.get(
-                    f"https://api.scratch.mit.edu/users/{self.username}/followers/?limit=40&offset={str(offset)}"
+                    f"https://api.scratch.mit.edu/users/{self.username}/followers/?limit=40&offset={offset}"
                 ).json()
                 users += res
                 if len(res) != 40:
@@ -124,7 +124,7 @@ class User:
                 map(
                     self._client._to_user,
                     requests.get(
-                        f"https://api.scratch.mit.edu/users/{self.username}/followers/?limit={str(limit)}&offset={str(offset)}"
+                        f"https://api.scratch.mit.edu/users/{self.username}/followers/?limit={limit}&offset={offset}"
                     ).json(),
                 )
             )
@@ -135,7 +135,7 @@ class User:
             offset = 0
             while True:
                 res = requests.get(
-                    f"https://api.scratch.mit.edu/users/{self.username}/following/?limit=40&offset={str(offset)}"
+                    f"https://api.scratch.mit.edu/users/{self.username}/following/?limit=40&offset={offset}"
                 ).json()
                 users += res
                 if len(res) != 40:
@@ -147,7 +147,7 @@ class User:
                 map(
                     self._client._to_user,
                     requests.get(
-                        f"https://api.scratch.mit.edu/users/{self.username}/following/?limit={str(limit)}&offset={str(offset)}"
+                        f"https://api.scratch.mit.edu/users/{self.username}/following/?limit={limit}&offset={offset}"
                     ).json(),
                 )
             )

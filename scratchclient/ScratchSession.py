@@ -68,19 +68,19 @@ class ScratchSession:
     def get_user(self, user):
         username = user.username if isinstance(user, IncompleteUser) else user
         return self._to_user(
-            requests.get("https://api.scratch.mit.edu/users/" + username + "/").json(),
+            requests.get(f"https://api.scratch.mit.edu/users/{username}/").json(),
         )
 
     def get_project(self, id):
         return self._to_project(
             requests.get(
-                "https://api.scratch.mit.edu/projects/" + str(id) + "/"
+                f"https://api.scratch.mit.edu/projects/{id}/"
             ).json(),
         )
 
     def get_studio(self, id):
         return self._to_studio(
-            requests.get("https://api.scratch.mit.edu/studios/" + str(id) + "/").json(),
+            requests.get(f"https://api.scratch.mit.edu/studios/{id}/").json(),
         )
 
     def get_news(self):
@@ -101,7 +101,7 @@ class ScratchSession:
             offset = 0
             while True:
                 res = requests.get(
-                    f"https://api.scratch.mit.edu/users/{self.username}/messages/?limit=40&offset={str(offset)}&filter={str(filter)}",
+                    f"https://api.scratch.mit.edu/users/{self.username}/messages/?limit=40&offset={offset}&filter={filter}",
                     headers=headers,
                 ).json()
                 messages += res
@@ -114,7 +114,7 @@ class ScratchSession:
                 map(
                     self._to_message,
                     requests.get(
-                        f"https://api.scratch.mit.edu/users/{self.username}/messages/?limit={limit}&offset={str(offset)}&filter={str(filter)}",
+                        f"https://api.scratch.mit.edu/users/{self.username}/messages/?limit={limit}&offset={offset}&filter={filter}",
                         headers=headers,
                     ).json(),
                 )

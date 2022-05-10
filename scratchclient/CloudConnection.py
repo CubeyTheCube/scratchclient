@@ -69,7 +69,7 @@ class CloudConnection(EventEmitter):
                 packet = {
                     "method": "set",
                     "name": (
-                        f"☁ {variable}" if not variable.startswith("☁ ") else variable
+                        f"☁ {variable if not variable.startswith('☁ ') else variable}"
                     ),
                     "value": str(value),
                     "user": self._client.username,
@@ -80,9 +80,7 @@ class CloudConnection(EventEmitter):
                 self._timer = time.time()
                 for cloud in self._cloudvariables:
                     if (
-                        cloud.name == "☁ " + variable
-                        if not variable.startswith("☁ ")
-                        else variable
+                        cloud.name == f"☁ {variable if not variable.startswith('☁ ') else variable}"
                     ):
                         cloud.value = value
                         self.emit("set", cloud)
@@ -122,7 +120,7 @@ class CloudConnection(EventEmitter):
             var = next(
                 x
                 for x in self._cloudvariables
-                if x.name == ("☁ " + name if not name.startswith("☁ ") else name)
+                if x.name == (f"☁ {name if not name.startswith('☁ ') else name}")
             )
             return var.value
         except StopIteration:

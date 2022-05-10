@@ -1,6 +1,6 @@
 import requests
 import json
-
+from .Project import Project
 
 class UserProfile:
     def __init__(self, data, user):
