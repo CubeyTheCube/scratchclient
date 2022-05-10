@@ -93,11 +93,7 @@ class ScratchSession:
             "x-csrftoken": self.csrf_token,
             "X-Token": self.token,
             "x-requested-with": "XMLHttpRequest",
-            "Cookie": "scratchcsrftoken="
-            + self.csrf_token
-            + ";scratchlanguage=en;scratchsessionsid="
-            + self.session_id
-            + ";",
+            "Cookie": f"scratchcsrftoken={self.csrf_token};scratchlanguage=en;scratchsessionsid={self.session_id};",
             "referer": "https://scratch.mit.edu",
         }
         if all:
@@ -105,12 +101,7 @@ class ScratchSession:
             offset = 0
             while True:
                 res = requests.get(
-                    "https://api.scratch.mit.edu/users/"
-                    + self.username
-                    + "/messages/"
-                    + "?limit=40&offset="
-                    + str(offset)
-                    + "&filter="+ str(filter),
+                    f"https://api.scratch.mit.edu/users/{self.username}/messages/?limit=40&offset={str(offset)}&filter={str(filter)}",
                     headers=headers,
                 ).json()
                 messages += res
@@ -123,14 +114,7 @@ class ScratchSession:
                 map(
                     self._to_message,
                     requests.get(
-                        "https://api.scratch.mit.edu/users/"
-                        + self.username
-                        + "/messages/"
-                        + "?limit="
-                        + str(limit)
-                        + "&offset="
-                        + str(offset)
-                        + "&filter="+ str(filter),
+                        f"https://api.scratch.mit.edu/users/{self.username}/messages/?limit={limit}&offset={str(offset)}&filter={str(filter)}",
                         headers=headers,
                     ).json(),
                 )
@@ -144,10 +128,7 @@ class ScratchSession:
             map(
                 self._to_project,
                 requests.get(
-                    "https://api.scratch.mit.edu/explore/projects/?mode="
-                    + mode
-                    + "&q="
-                    + query
+                    f"https://api.scratch.mit.edu/explore/projects/?mode={mode}&q={query}"
                 ).json(),
             )
         )
@@ -157,10 +138,7 @@ class ScratchSession:
             map(
                 self._to_studio,
                 requests.get(
-                    "https://api.scratch.mit.edu/explore/studios/?mode="
-                    + mode
-                    + "&q="
-                    + query
+                    f"https://api.scratch.mit.edu/explore/studios/?mode={mode}&q={query}"
                 ).json(),
             )
         )
@@ -170,10 +148,7 @@ class ScratchSession:
             map(
                 self._to_project,
                 requests.get(
-                    "https://api.scratch.mit.edu/search/projects/?mode="
-                    + mode
-                    + "&q="
-                    + query
+                    f"https://api.scratch.mit.edu/search/projects/?mode={mode}&q={query}"
                 ).json(),
             )
         )
@@ -183,10 +158,7 @@ class ScratchSession:
             map(
                 self._to_studio,
                 requests.get(
-                    "https://api.scratch.mit.edu/search/studios/?mode="
-                    + mode
-                    + "&q="
-                    + query
+                    f"https://api.scratch.mit.edu/search/studios/?mode={mode}&q={query}"
                 ).json(),
             )
         )

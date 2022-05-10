@@ -15,7 +15,7 @@ class UserProfile:
     def set_bio(self, content):
         data = {"bio": content}
         return requests.put(
-            "https://scratch.mit.edu/site-api/users/all/" + self.username + "/",
+            f"https://scratch.mit.edu/site-api/users/all/{self.username}/",
             data=json.dumps(data),
             headers=self.user._headers,
         )
@@ -23,7 +23,7 @@ class UserProfile:
     def set_status(self, content):
         data = {"status": content}
         return requests.put(
-            "https://scratch.mit.edu/site-api/users/all/" + self.username + "/",
+            f"https://scratch.mit.edu/site-api/users/all/{self.username}/",
             data=json.dumps(data),
             headers=self.user._headers,
         )
@@ -42,7 +42,7 @@ class UserProfile:
         project_id = project.id if isinstance(project, Project) else project
         data = {"featured_project": project_id, "featured_project_label": label}
         requests.put(
-            "https://scratch.mit.edu/site-api/users/all/" + self.username + "/",
+            f"https://scratch.mit.edu/site-api/users/all/{self.username}/",
             data=json.dumps(data),
             headers=self._headers,
         )

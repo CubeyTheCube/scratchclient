@@ -35,8 +35,8 @@ class CloudConnection(EventEmitter):
         self._timer = time.time()
         self._ws.connect(
             "wss://clouddata.scratch.mit.edu",
-            cookie="scratchsessionsid=" + self._client.session_id + ";",
-            origin="https://scratch.mit.edu",
+            cookie = f"scratchsessionsid={self._client.session_id};",
+            origin = "https://scratch.mit.edu",
             enable_multithread=True,
         )  # connect the websocket
         self._send_packet(
@@ -69,7 +69,7 @@ class CloudConnection(EventEmitter):
                 packet = {
                     "method": "set",
                     "name": (
-                        "☁ " + variable if not variable.startswith("☁ ") else variable
+                        f"☁ {variable}" if not variable.startswith("☁ ") else variable
                     ),
                     "value": str(value),
                     "user": self._client.username,
@@ -127,7 +127,5 @@ class CloudConnection(EventEmitter):
             return var.value
         except StopIteration:
             raise ValueError(
-                "Variable '"
-                + ("☁ " + name if not name.startswith("☁ ") else name)
-                + "' is not in this project"
+                f"Variable '{('☁ ' + name if not name.startswith('☁ ') else name)}' is not in this project"
             )

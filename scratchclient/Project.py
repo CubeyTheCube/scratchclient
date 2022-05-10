@@ -37,23 +37,15 @@ class Project:
             "x-csrftoken": self._client.csrf_token,
             "X-Token": self._client.token,
             "x-requested-with": "XMLHttpRequest",
-            "Cookie": "scratchcsrftoken="
-            + self._client.csrf_token
-            + ";scratchlanguage=en;scratchsessionsid="
-            + self._client.session_id
-            + ";",
-            "referer": "https://scratch.mit.edu/projects/" + str(self.id) + "/",
+            "Cookie": f"scratchcsrftoken={self._client.csrf_token};scratchlanguage=en;scratchsessionsid={self._client.session_id};",
+            "referer": f"https://scratch.mit.edu/projects/{str(self.id)}/",
         }
         self._json_headers = {
             "x-csrftoken": self._client.csrf_token,
             "X-Token": self._client.token,
             "x-requested-with": "XMLHttpRequest",
-            "Cookie": "scratchcsrftoken="
-            + self._client.csrf_token
-            + ";scratchlanguage=en;scratchsessionsid="
-            + self._client.session_id
-            + ";",
-            "referer": "https://scratch.mit.edu/projects/" + str(self.id) + "/",
+            "Cookie": f"scratchcsrftoken={self._client.csrf_token};scratchlanguage=en;scratchsessionsid={self._client.session_id};",
+            "referer": f"https://scratch.mit.edu/projects/{str(self.id)}/",
             "accept": "application/json",
             "Content-Type": "application/json",
         }
@@ -63,55 +55,37 @@ class Project:
 
     def get_comment(self, comment_id):
         data = requests.get(
-            "https://api.scratch.mit.edu/users/"
-            + self.author.username
-            + "/projects/"
-            + str(self.id)
-            + "/comments/"
-            + str(comment_id)
-            + "/"
+            f"https://api.scratch.mit.edu/users/{self.author.username}/projects/{str(self.id)}/comments/{str(comment_id)}/"
         ).json()
         return self._to_project_comment(data)
 
     def love(self):
         return requests.post(
-            "https://api.scratch.mit.edu/proxy/projects/"
-            + str(self.id)
-            + "/loves/user/"
-            + self._client.username,
+            f"https://api.scratch.mit.edu/proxy/projects/{str(self.id)}/loves/user/{self._client.username}",
             headers=self._headers,
         ).json()["userLove"]
 
     def unlove(self):
         return requests.delete(
-            "https://api.scratch.mit.edu/proxy/projects/"
-            + str(self.id)
-            + "/loves/user/"
-            + self._client.username,
+            f"https://api.scratch.mit.edu/proxy/projects/{str(self.id)}/loves/user/{self._client.username}",
             headers=self._headers,
         ).json()["userLove"]
 
     def favorite(self):
         return requests.post(
-            "https://api.scratch.mit.edu/proxy/projects/"
-            + str(self.id)
-            + "/favorites/user/"
-            + self._client.username,
+            f"https://api.scratch.mit.edu/proxy/projects/{str(self.id)}/favorites/user/{self._client.username}",
             headers=self._headers,
         ).json()["userFavorite"]
 
     def unfavorite(self):
         return requests.delete(
-            "https://api.scratch.mit.edu/proxy/projects/"
-            + str(self.id)
-            + "/favorites/user/"
-            + self._client.username,
+            f"https://api.scratch.mit.edu/proxy/projects/{str(self.id)}/favorites/user/{self._client.username}",
             headers=self._headers,
         ).json()["userFavorite"]
 
     def get_scripts(self):
         return requests.get(
-            "https://projects.scratch.mit.edu/" + str(self.id) + "/"
+            f"https://projects.scratch.mit.edu/{str(self.id)}/"
         ).json()
 
     def get_remixes(self, all=False, limit=20, offset=0):
@@ -120,11 +94,7 @@ class Project:
             offset = 0
             while True:
                 res = requests.get(
-                    "https://api.scratch.mit.edu/projects/"
-                    + str(self.id)
-                    + "/remixes/"
-                    + "?limit=40&offset="
-                    + str(offset)
+                    f"https://api.scratch.mit.edu/projects/{str(self.id)}/remixes/?limit=40&offset={str(offset)}"
                 ).json()
                 projects += res
                 if len(res) != 40:
@@ -136,13 +106,7 @@ class Project:
                 map(
                     self._client._to_project,
                     requests.get(
-                        "https://api.scratch.mit.edu/projects/"
-                        + str(self.id)
-                        + "/remixes/"
-                        + "?limit="
-                        + str(limit)
-                        + "&offset="
-                        + str(offset)
+                        f"https://api.scratch.mit.edu/projects/{str(self.id)}/remixes/?limit={str(limit)}&offset={str(offset)}"
                     ).json(),
                 )
             )
@@ -153,11 +117,7 @@ class Project:
             offset = 0
             while True:
                 res = requests.get(
-                    "https://api.scratch.mit.edu/projects/"
-                    + str(self.id)
-                    + "/studios/"
-                    + "?limit=40&offset="
-                    + str(offset)
+                    f"https://api.scratch.mit.edu/projects/{str(self.id)}/studios/?limit=40&offset={str(offset)}"
                 ).json()
                 studios += res
                 if len(res) != 40:
@@ -169,13 +129,7 @@ class Project:
                 map(
                     self._client._to_studio,
                     requests.get(
-                        "https://api.scratch.mit.edu/projects/"
-                        + str(self.id)
-                        + "/studios/"
-                        + "?limit="
-                        + str(limit)
-                        + "&offset="
-                        + str(offset)
+                        f"https://api.scratch.mit.edu/projects/{str(self.id)}/studios/?limit={str(limit)}&offset={str(offset)}"
                     ).json(),
                 )
             )
@@ -187,7 +141,7 @@ class Project:
             "parent_id": parent_id,
         }
         return requests.post(
-            "https://api.scratch.mit.edu/proxy/comments/project/" + str(self.id) + "/",
+            f"https://api.scratch.mit.edu/proxy/comments/project/{str(self.id)}/",
             headers=self._json_headers,
             data=json.dumps(data),
         ).json()
@@ -198,13 +152,7 @@ class Project:
             offset = 0
             while True:
                 res = requests.get(
-                    "https://api.scratch.mit.edu/users/"
-                    + self.author.username
-                    + "/projects/"
-                    + str(self.id)
-                    + "/comments/"
-                    + "?limit=40&offset="
-                    + str(offset)
+                    f"https://api.scratch.mit.edu/users/{self.author.username}/projects/{str(self.id)}/comments/?limit=40&offset={str(offset)}"
                 ).json()
                 comments += res
                 if len(res) != 40:
@@ -216,15 +164,7 @@ class Project:
                 map(
                     self._to_project_comment,
                     requests.get(
-                        "https://api.scratch.mit.edu/users/"
-                        + self.author.username
-                        + "/projects/"
-                        + str(self.id)
-                        + "/comments/"
-                        + "?limit="
-                        + str(limit)
-                        + "&offset="
-                        + str(offset)
+                        f"https://api.scratch.mit.edu/users/{self.author.username}/projects/{str(self.id)}/comments/?limit={str(limit)}&offset={str(offset)}"
                     ).json(),
                 )
             )
@@ -236,7 +176,7 @@ class Project:
         self.comments_allowed = not self.comments_allowed
         return self._client._to_project(
             requests.put(
-                "https://api.scratch.mit.edu/projects/" + str(self.id) + "/",
+                f"https://api.scratch.mit.edu/projects/{str(self.id)}/",
                 data=json.dumps(data),
                 headers=self._json_headers,
             ).json()
@@ -249,7 +189,7 @@ class Project:
         self.comments_allowed = True
         return self._client._to_project(
             requests.put(
-                "https://api.scratch.mit.edu/projects/" + str(self.id) + "/",
+                f"https://api.scratch.mit.edu/projects/{str(self.id)}/",
                 data=json.dumps(data),
                 headers=self._json_headers,
             ).json()
@@ -262,7 +202,7 @@ class Project:
         self.comments_allowed = False
         return self._client._to_project(
             requests.put(
-                "https://api.scratch.mit.edu/projects/" + str(self.id) + "/",
+                f"https://api.scratch.mit.edu/projects/{str(self.id)}/",
                 data=json.dumps(data),
                 headers=self._json_headers,
             ).json()
@@ -273,7 +213,7 @@ class Project:
             image = self.thumbnail_URL
         data = {"notes": reason, "report_category": category, "thumbnail": image}
         return requests.post(
-            "https://api.scratch.mit.edu/proxy/comments/project/" + str(self.id) + "/",
+            f"https://api.scratch.mit.edu/proxy/comments/project/{str(self.id)}/",
             data=json.dumps(data),
             headers=self._json_headers,
         ).text
@@ -282,7 +222,7 @@ class Project:
         if self.author.username != self._client.username:
             raise UnauthorizedException("You are not allowed to do that")
         requests.put(
-            "https://api.scratch.mit.edu/proxy/projects/" + str(self.id) + "/unshare/",
+            f"https://api.scratch.mit.edu/proxy/projects/{str(self.id)}/unshare/",
             headers=self._json_headers,
         )
 
@@ -290,17 +230,13 @@ class Project:
         if self.author.username != self._client.username:
             raise UnauthorizedException("You are not allowed to do that")
         requests.put(
-            "https://api.scratch.mit.edu/proxy/projects/" + str(self.id) + "/share/",
+            f"https://api.scratch.mit.edu/proxy/projects/{str(self.id)}/share/",
             headers=self._json_headers,
         )
 
     def view(self):
         requests.post(
-            "https://api.scratch.mit.edu/users/"
-            + self.author.username
-            + "/projects/"
-            + str(self.id)
-            + "/views/",
+            f"https://api.scratch.mit.edu/users/{self.author.username}/projects/{str(self.id)}/views/",
             headers=self._headers,
         )
 
@@ -309,9 +245,7 @@ class Project:
             raise UnauthorizedException("You are not allowed to do that")
         image = open(file, "rb")
         requests.post(
-            "https://scratch.mit.edu/internalapi/project/thumbnail/"
-            + str(self.id)
-            + "/set/",
+            f"https://scratch.mit.edu/internalapi/project/thumbnail/{str(self.id)}/set/",
             data=image.read(),
             headers=self._headers,
         )
@@ -321,8 +255,7 @@ class Project:
             raise UnauthorizedException("You are not allowed to do that")
         data = { "title": title }
         requests.put(
-            "https://api.scratch.mit.edu/projects/"
-            + str(self.id),
+            f"https://api.scratch.mit.edu/projects/{str(self.id)}",
             data=json.dumps(data),
             headers=self._json_headers,
         )
