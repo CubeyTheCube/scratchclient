@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://CubeyTheCube.github.io/scratchclient/replit/</loc>
+         <lastmod>2022-08-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://CubeyTheCube.github.io/scratchclient/examples/basic-usage/</loc>
          <lastmod>2022-08-09</lastmod>
          <changefreq>daily</changefreq>
