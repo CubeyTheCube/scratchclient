@@ -1,6 +1,4 @@
-# Scratchclient Documentation
-
-This is the documentation for scratchclient.
+# Basic Usage
 
 ## Get Started
 ```python
@@ -16,7 +14,7 @@ print(session.get_project(450216269).get_comments()[0].content)
 print(session.get_studio(29251822).description)
 ```
 
-## Cloud Connection
+## Cloud Connection:
 ```python
 from scratchclient import ScratchSession
 
@@ -32,9 +30,3 @@ def on_set(variable):
 
 print(connection.get_cloud_variable("other variable"))
 ```
-
-See the examples for more code samples.
-
-## CLI
-
-scratchclient has a command line interface for retrieving Scratch website data from the command line. Use `python3 -m scratchclient help` to get started.

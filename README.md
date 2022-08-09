@@ -1,8 +1,6 @@
 # scratchclient
 A scratch API wrapper for python. 
 
-Based off of https://github.com/edqx/node-scratch-client, and [ilcheese2](https://scratch.mit.edu/users/ilcheese2/)'s cloud code based on my own. 
-
 ## Installation
 
 Go to your terminal (not your python shell) and execute this command:
@@ -10,15 +8,14 @@ Go to your terminal (not your python shell) and execute this command:
 pip install scratchclient
 ```
 
-If you want cloud variables to run faster, use this command:
-```bash
-pip install scratchclient[fast]
+If this didn't work for whatever reason, open your python shell and run the following:
+```python
+import os; os.system("pip install scratchclient")
 ```
-Note that to do this, you need to install [Visual C++ 14.0](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
 
-## Example usage
+## Example Usage
 
-### Basic usage:
+### Basic Usage
 ```python
 from scratchclient import ScratchSession
 
@@ -31,7 +28,7 @@ session.get_user("Paddle2See").post_comment("OwO")
 print(session.get_project(450216269).get_comments()[0].content)
 print(session.get_studio(29251822).description)
 ```
-### Cloud connection:
+### Cloud Connection
 ```python
 from scratchclient import ScratchSession
 
@@ -48,6 +45,6 @@ def on_set(variable):
 print(connection.get_cloud_variable("other variable"))
 ```
 
-Documentation is on the way.
+Documentation is available at <https://cubeythecube.github.io/scratchclient>.
 
-All bugs should be reported to the [github repository](https://github.com/CubeyTheCube/scratchclient) or my [Scratch profile](https://scratch.mit.edu/users/Raihan142857/).
+All bugs should be reported to the [github repository](https://github.com/CubeyTheCube/scratchclient/issues). If you need help or guideance, check out the [forum topic](https://scratch.mit.edu/discuss/topic/506810).

@@ -1,1 +1,1 @@
-from scratchclient.ScratchSession import ScratchSession
+from .ScratchSession import ScratchSession

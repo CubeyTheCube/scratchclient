@@ -8,3 +8,11 @@ class InvalidCredentialsException(ScratchExceptions):
 
 class UnauthorizedException(ScratchExceptions):
     pass
+
+
+class RejectedException(ScratchExceptions):
+    pass
+
+
+class CloudVariableException(ScratchExceptions):
+    pass

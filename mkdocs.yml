@@ -5,11 +5,54 @@ repo_name: CubeyTheCube/scratchclient
 theme:
   name: material
   palette:
-    primary: blue
+    primary: light blue
+    accent: amber
   features:
     - navigation.instant
   icon:
     repo: fontawesome/brands/git-alt
-    
+
+nav:
+  - Home: 'index.md'
+  - 'Examples':
+    - 'Basic Usage': 'examples/basic-usage.md'
+    - 'Stats Viewer': 'examples/stats-viewer.md'
+    - 'Simultaneous Connections': 'examples/simultaneous-connections.md'
+  - 'API Reference':
+    - ScratchSession: 'reference/ScratchSession.md'
+    - User: 'reference/User.md'
+    - Project: 'reference/Project.md'
+    - Studio: 'reference/Studio.md'
+    - UserProfile: 'reference/UserProfile.md'
+    - IncompleteUser: 'reference/IncompleteUser.md'
+    - IncompleteProject: 'reference/IncompleteProject.md'
+    - IncompleteStudio: 'reference/IncompleteStudio.md'
+    - RemixtreeProject: 'reference/RemixtreeProject.md'
+    - ProfileComment: 'reference/ProfileComment.md'
+    - ProjectComment: 'reference/ProjectComment.md'
+    - StudioComment: 'reference/StudioComment.md'
+    - News: 'reference/News.md'
+    - Message: 'reference/Message.md'
+    - Activity: 'reference/Activity.md'
+    - ForumSession: 'reference/ForumSession.md'
+    - ForumPost: 'reference/ForumPost.md'
+    - ScrapingSession: 'reference/ScrapingSession.md'
+    - BackpackItem: 'reference/BackpackItem.md'
+    - CloudConnection: 'reference/CloudConnection.md'
+    - AsyncCloudConnection: 'reference/AsyncCloudConnection.md'
+    - CloudVariable: 'reference/CloudVariable.md'
+   
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - toc:
+      permalink: True
+  - admonition
+  - attr_list
+
+extra_css:
+  - stylesheets/extra.css
+
 plugins:
   - search

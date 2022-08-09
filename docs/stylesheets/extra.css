@@ -1,0 +1,33 @@
+:root {
+  --md-admonition-icon--fun-fact: url('../assets/lightbulb.svg')
+}
+
+.md-typeset .admonition.fun-fact,
+.md-typeset details.fun-fact {
+  border-color: #FFCC00;
+}
+
+.fun-fact-country-parent li:nth-child(5) {
+  list-style: none;
+}
+
+.md-typeset .fun-fact > .admonition-title,
+.md-typeset .fun-fact > summary {
+  background-color: #FFCC0019;
+  padding-bottom: 10px;
+}
+
+.md-typeset h2 {
+  font-size: 2em;
+}
+
+.md-typeset h3 {
+  font-size: 1.5625em;
+}
+
+.md-typeset .fun-fact > .admonition-title::before,
+.md-typeset .fun-fact > summary::before {
+  background-color: #FFCC00;
+  -webkit-mask-image: var(--md-admonition-icon--fun-fact);
+  mask-image: var(--md-admonition-icon--fun-fact);
+}
