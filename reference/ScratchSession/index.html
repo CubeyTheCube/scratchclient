@@ -1,0 +1,1770 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://CubeyTheCube.github.io/scratchclient/reference/ScratchSession/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>ScratchSession - scratchclient docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#02a6f2">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-blue" data-md-color-accent="amber">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#scratchsession" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="scratchclient docs" class="md-header__button md-logo" aria-label="scratchclient docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            scratchclient docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ScratchSession
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CubeyTheCube/scratchclient" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CubeyTheCube/scratchclient
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="scratchclient docs" class="md-nav__button md-logo" aria-label="scratchclient docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    scratchclient docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CubeyTheCube/scratchclient" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CubeyTheCube/scratchclient
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Examples" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/basic-usage/" class="md-nav__link">
+        Basic Usage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/stats-viewer/" class="md-nav__link">
+        Stats Viewer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/simultaneous-connections/" class="md-nav__link">
+        Simultaneous Connections
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          API Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ScratchSession
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        ScratchSession
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ScratchSession" class="md-nav__link">
+    ScratchSession
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#username" class="md-nav__link">
+    username
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session_id" class="md-nav__link">
+    session_id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token" class="md-nav__link">
+    token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csrf_token" class="md-nav__link">
+    csrf_token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logged_in" class="md-nav__link">
+    logged_in
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user" class="md-nav__link">
+    user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forums" class="md-nav__link">
+    forums
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scraping" class="md-nav__link">
+    scraping
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get_user" class="md-nav__link">
+    get_user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_project" class="md-nav__link">
+    get_project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_studio" class="md-nav__link">
+    get_studio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_news" class="md-nav__link">
+    get_news
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_messages" class="md-nav__link">
+    get_messages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_cloud_connection" class="md-nav__link">
+    create_cloud_connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explore_projects" class="md-nav__link">
+    explore_projects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explore_studios" class="md-nav__link">
+    explore_studios
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search_projects" class="md-nav__link">
+    search_projects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search_studios" class="md-nav__link">
+    search_studios
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_front_page" class="md-nav__link">
+    get_front_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_activity" class="md-nav__link">
+    get_activity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_project" class="md-nav__link">
+    create_project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_studio" class="md-nav__link">
+    create_studio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#empty_trash" class="md-nav__link">
+    empty_trash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_own_projects" class="md-nav__link">
+    get_own_projects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_own_studios" class="md-nav__link">
+    get_own_studios
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload_asset" class="md-nav__link">
+    upload_asset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change_country" class="md-nav__link">
+    change_country
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change_password" class="md-nav__link">
+    change_password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change_email" class="md-nav__link">
+    change_email
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change_email_subscription" class="md-nav__link">
+    change_email_subscription
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_backpack" class="md-nav__link">
+    get_backpack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add_to_backpack" class="md-nav__link">
+    add_to_backpack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_statistics" class="md-nav__link">
+    get_statistics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is_valid_username" class="md-nav__link">
+    is_valid_username
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_password" class="md-nav__link">
+    check_password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logout" class="md-nav__link">
+    logout
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User/" class="md-nav__link">
+        User
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Project/" class="md-nav__link">
+        Project
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Studio/" class="md-nav__link">
+        Studio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UserProfile/" class="md-nav__link">
+        UserProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IncompleteUser/" class="md-nav__link">
+        IncompleteUser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IncompleteProject/" class="md-nav__link">
+        IncompleteProject
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IncompleteStudio/" class="md-nav__link">
+        IncompleteStudio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RemixtreeProject/" class="md-nav__link">
+        RemixtreeProject
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProfileComment/" class="md-nav__link">
+        ProfileComment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProjectComment/" class="md-nav__link">
+        ProjectComment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StudioComment/" class="md-nav__link">
+        StudioComment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../News/" class="md-nav__link">
+        News
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Message/" class="md-nav__link">
+        Message
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Activity/" class="md-nav__link">
+        Activity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ForumSession/" class="md-nav__link">
+        ForumSession
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ForumPost/" class="md-nav__link">
+        ForumPost
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ScrapingSession/" class="md-nav__link">
+        ScrapingSession
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BackpackItem/" class="md-nav__link">
+        BackpackItem
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CloudConnection/" class="md-nav__link">
+        CloudConnection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AsyncCloudConnection/" class="md-nav__link">
+        AsyncCloudConnection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CloudVariable/" class="md-nav__link">
+        CloudVariable
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ScratchSession" class="md-nav__link">
+    ScratchSession
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#username" class="md-nav__link">
+    username
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session_id" class="md-nav__link">
+    session_id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token" class="md-nav__link">
+    token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csrf_token" class="md-nav__link">
+    csrf_token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logged_in" class="md-nav__link">
+    logged_in
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user" class="md-nav__link">
+    user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forums" class="md-nav__link">
+    forums
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scraping" class="md-nav__link">
+    scraping
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get_user" class="md-nav__link">
+    get_user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_project" class="md-nav__link">
+    get_project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_studio" class="md-nav__link">
+    get_studio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_news" class="md-nav__link">
+    get_news
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_messages" class="md-nav__link">
+    get_messages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_cloud_connection" class="md-nav__link">
+    create_cloud_connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explore_projects" class="md-nav__link">
+    explore_projects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explore_studios" class="md-nav__link">
+    explore_studios
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search_projects" class="md-nav__link">
+    search_projects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search_studios" class="md-nav__link">
+    search_studios
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_front_page" class="md-nav__link">
+    get_front_page
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_activity" class="md-nav__link">
+    get_activity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_project" class="md-nav__link">
+    create_project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_studio" class="md-nav__link">
+    create_studio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#empty_trash" class="md-nav__link">
+    empty_trash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_own_projects" class="md-nav__link">
+    get_own_projects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_own_studios" class="md-nav__link">
+    get_own_studios
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upload_asset" class="md-nav__link">
+    upload_asset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change_country" class="md-nav__link">
+    change_country
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change_password" class="md-nav__link">
+    change_password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change_email" class="md-nav__link">
+    change_email
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change_email_subscription" class="md-nav__link">
+    change_email_subscription
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_backpack" class="md-nav__link">
+    get_backpack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add_to_backpack" class="md-nav__link">
+    add_to_backpack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_statistics" class="md-nav__link">
+    get_statistics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is_valid_username" class="md-nav__link">
+    is_valid_username
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_password" class="md-nav__link">
+    check_password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logout" class="md-nav__link">
+    logout
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/CubeyTheCube/scratchclient/edit/master/docs/reference/ScratchSession.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="scratchsession"><strong>ScratchSession</strong><a class="headerlink" href="#scratchsession" title="Permanent link">&para;</a></h1>
+<h2 id="ScratchSession"><code class="highlight"><span class="n">ScratchSession</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">session_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code><a class="headerlink" href="#ScratchSession" title="Permanent link">&para;</a></h2>
+<p>Returns an object representing the user's current session. If a password is not passed, you could pass a session ID and a token to authenticate yourself.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li>
+<p><strong>username</strong> (<code class="highlight"><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span></code>) - The username of the user.</p>
+</li>
+<li>
+<p><strong>password</strong> (<code class="highlight"><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span></code>) - The password of the user's account - used to log in.</p>
+</li>
+<li>
+<p><strong>session_id</strong> (<code class="highlight"><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span></code>) - The session ID of the session - used to authenticate many requests.</p>
+</li>
+<li>
+<p><strong>token</strong> (<code class="highlight"><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span></code>) - The token of the user - used to authenticate many requests.</p>
+</li>
+</ul>
+<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
+<h3 id="username"><code class="highlight"><span class="n">username</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span></code><a class="headerlink" href="#username" title="Permanent link">&para;</a></h3>
+<p>The username of the logged in user.
+Will be <code class="highlight"><span class="kc">None</span></code> if the user does not log in.</p>
+<h3 id="session_id"><code class="highlight"><span class="n">session_id</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span></code><a class="headerlink" href="#session_id" title="Permanent link">&para;</a></h3>
+<p>The Scratch session ID of the logged in user's session. Required to authenticate most requests to Scratch's old site (scratchr2).
+Will be <code class="highlight"><span class="kc">None</span></code> if the user does not log in and no session ID is passed to <code class="highlight"><span class="n">ScratchSession</span></code>.</p>
+<h3 id="token"><code class="highlight"><span class="n">token</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span></code><a class="headerlink" href="#token" title="Permanent link">&para;</a></h3>
+<p>The token of the logged in user. Required to authenticate most requests to Scratch's new site (scratch-www).
+Will be <code class="highlight"><span class="kc">None</span></code> if the user does not log in and no token is passed to <code class="highlight"><span class="n">ScratchSession</span></code>.</p>
+<h3 id="csrf_token"><code class="highlight"><span class="n">csrf_token</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span></code><a class="headerlink" href="#csrf_token" title="Permanent link">&para;</a></h3>
+<p>The CSRF token of the logged in user's session. Required for most requests that need authentication.
+Will be <code class="highlight"><span class="kc">None</span></code> if the user does not log in or does not provide a session ID or a token.</p>
+<h3 id="logged_in"><code class="highlight"><span class="n">logged_in</span> <span class="p">:</span> <span class="nb">bool</span></code><a class="headerlink" href="#logged_in" title="Permanent link">&para;</a></h3>
+<p>Whether the user is logged in or not. This is <code class="highlight"><span class="kc">True</span></code> if the user logs in or provides a session ID or a token.</p>
+<h3 id="user"><code class="highlight"><span class="n">user</span> <span class="p">:</span> <span class="n">User</span></code><a class="headerlink" href="#user" title="Permanent link">&para;</a></h3>
+<p>The <a href="../User">User</a> object of the logged in user.
+Will be <code class="highlight"><span class="kc">None</span></code> if the user does not log in or does not provide a session ID or a token.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">session</span> <span class="o">=</span> <span class="n">ScratchSession</span><span class="p">(</span><span class="s2">&quot;griffpatch&quot;</span><span class="p">,</span> <span class="s2">&quot;realpassword&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="c1"># 1882674</span>
+</code></pre></div>
+<h3 id="forums"><code class="highlight"><span class="n">forums</span> <span class="p">:</span> <span class="n">ForumSession</span></code><a class="headerlink" href="#forums" title="Permanent link">&para;</a></h3>
+<p>A <a href="../ForumSession">ForumSession</a> object that allows the user to do things with Scratch's forums.</p>
+<h3 id="scraping"><code class="highlight"><span class="n">scraping</span> <span class="p">:</span> <span class="n">ScrapingSession</span></code><a class="headerlink" href="#scraping" title="Permanent link">&para;</a></h3>
+<p>A <a href="../ScrapingSession">ScrapingSession</a> object that allows the user to scrape data off Scratch pages that are from the old site (scratchr2). These pages do not have JSON APIs, so it is necessary to scrape the HTML of the pages.</p>
+<div class="highlight"><pre><span></span><code><span class="n">session</span> <span class="o">=</span> <span class="n">ScratchSession</span><span class="p">(</span><span class="s2">&quot;griffpatch&quot;</span><span class="p">,</span> <span class="s2">&quot;realpassword&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">scraping</span><span class="o">.</span><span class="n">get_profile_comments</span><span class="p">(</span><span class="s2">&quot;ceebee&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+<span class="c1"># Pls ban @griffpatch he is hacking my account</span>
+</code></pre></div>
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<h3 id="get_user"><code class="highlight"><span class="n">get_user</span><span class="p">(</span><span class="n">user</span><span class="p">)</span></code><a class="headerlink" href="#get_user" title="Permanent link">&para;</a></h3>
+<p>Gets the <a href="../User">User</a> object of the specified username or user.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>user</strong> (<code class="highlight"><span class="nb">str</span> <span class="o">|</span> <span class="n">IncompleteUser</span> <span class="o">|</span> <span class="n">User</span></code>) - The username of the user or an <a href="../IncompleteUser">IncompleteUser</a> or a <a href="../User">User</a> object representing it.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="n">User</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="s2">&quot;griffpatch&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">scratchteam</span><span class="p">)</span>
+<span class="c1"># False</span>
+</code></pre></div>
+<h3 id="get_project"><code class="highlight"><span class="n">get_project</span><span class="p">(</span><span class="n">project</span><span class="p">)</span></code><a class="headerlink" href="#get_project" title="Permanent link">&para;</a></h3>
+<p>Gets the <a href="../Project">Project</a> object for the specified ID or project.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>project</strong> (<code class="highlight"><span class="nb">str</span> <span class="o">|</span> <span class="nb">int</span> <span class="o">|</span> <span class="n">IncompleteProject</span> <span class="o">|</span> <span class="n">RemixtreeProject</span> <span class="o">|</span> <span class="n">Project</span></code>) - The ID of the project (as either a string or an integer) or an <a href="../IncompleteProject">IncompleteProject</a>, a <a href="../RemixtreeProject">RemixtreeProject</a>, or a <a href="../Project">Project</a> object representing it.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="n">Project</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="mi">60917032</span><span class="p">)</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+<span class="c1"># Appel v1.4</span>
+</code></pre></div>
+<h3 id="get_studio"><code class="highlight"><span class="n">get_studio</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span></code><a class="headerlink" href="#get_studio" title="Permanent link">&para;</a></h3>
+<p>Gets the <a href="../Studio">Studio</a> object for the specified ID or studio.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>studio</strong> (<code class="highlight"><span class="nb">str</span> <span class="o">|</span> <span class="nb">int</span> <span class="o">|</span> <span class="n">IncompleteStudio</span> <span class="o">|</span> <span class="n">Studio</span></code>) - The ID of the studio (as either a string or an integer) or an <a href="../IncompleteStudio">IncompleteStudio</a> or a <a href="../Studio">Studio</a> object representing it.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="n">Studio</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">get_studio</span><span class="p">(</span><span class="mi">26135902</span><span class="p">)</span><span class="o">.</span><span class="n">owner</span><span class="p">)</span>
+<span class="c1"># Za-Chary</span>
+</code></pre></div>
+<h3 id="get_news"><code class="highlight"><span class="n">get_news</span><span class="p">(</span><span class="nb">all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code><a class="headerlink" href="#get_news" title="Permanent link">&para;</a></h3>
+<p>Gets Scratch's <a href="https://scratch.mit.edu/discuss/5/">news</a> as an array of <a href="../News">News</a> objects.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>all</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span></code>) - Whether to retrieve every single news headline or only <code class="highlight"><span class="n">limit</span></code> headlines.</li>
+<li><strong>limit</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>) - How many news headlines to retrieve if <code class="highlight"><span class="nb">all</span></code> is <code class="highlight"><span class="kc">False</span></code>.</li>
+<li><strong>offset</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>) - The offset of the headlines from the newest ones - i.e. an offset of 20 would give you the next 20 headlines after the first 20.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">list</span><span class="p">[</span><span class="n">News</span><span class="p">]</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">get_news</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+<span class="c1"># Wiki Wednesday!</span>
+</code></pre></div>
+<h3 id="get_messages"><code class="highlight"><span class="n">get_messages</span><span class="p">(</span><span class="nb">all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span></code><a class="headerlink" href="#get_messages" title="Permanent link">&para;</a></h3>
+<p>Gets the messages of the logged in user as an array of <a href="../Message">Message</a> objects.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>all</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span></code>) - Whether to retrieve every single message or only <code class="highlight"><span class="n">limit</span></code> message.</li>
+<li><strong>limit</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>) - How many news messages to retrieve if <code class="highlight"><span class="nb">all</span></code> is <code class="highlight"><span class="kc">False</span></code>.</li>
+<li><strong>offset</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>) - The offset of the messages from the newest ones - i.e. an offset of 20 would give you the next 20 messages after the first 20.</li>
+<li><strong>filter</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;comments&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;projects&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;studios&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;forums&quot;</span><span class="p">]]</span></code>) - A filter to apply to the messages. Must be one of the following: an empty string, which does not filter out any messages; <code class="highlight"><span class="s2">&quot;comments&quot;</span></code>, which only includes comment activity; <code class="highlight"><span class="s2">&quot;projects&quot;</span></code>, which only includes project activity; <code class="highlight"><span class="s2">&quot;studios&quot;</span></code>, which only includes studio activity; or <code class="highlight"><span class="s2">&quot;forums&quot;</span></code>, which only includes forum activity.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">list</span><span class="p">[</span><span class="n">Message</span><span class="p">]</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">get_messages</span><span class="p">(</span><span class="nb">all</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">actor</span><span class="p">)</span>
+<span class="c1"># griffpatch</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">get_messages</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;comments&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">comment_fragment</span><span class="p">)</span>
+<span class="c1"># thank you my friend</span>
+</code></pre></div>
+<h3 id="create_cloud_connection"><code class="highlight"><span class="n">create_cloud_connection</span><span class="p">(</span><span class="n">project_id</span><span class="p">,</span> <span class="n">is_async</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">cloud_host</span><span class="o">=</span><span class="s2">&quot;clouddata.scratch.mit.edu&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{})</span></code><a class="headerlink" href="#create_cloud_connection" title="Permanent link">&para;</a></h3>
+<p>Creates a cloud connection for the specified project ID. Returns a <a href="../CloudConnection">CloudConnection</a> object if <code class="highlight"><span class="n">is_async</span></code> is <code>False</code>, otherwise it returns an <a href="../AsyncCloudConnection">AsyncCloudConnection</a> object.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>project_id</strong> (<code class="highlight"><span class="nb">int</span> <span class="o">|</span> <span class="n">string</span></code>) - The ID of the project to make a connection to, represented as either a string or an integer.</li>
+<li><strong>is_async</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span></code>) - Whether to return a <code class="highlight"><span class="n">CloudConnection</span></code> or an <code class="highlight"><span class="n">AsyncCloudConnection</span></code>. <a href="../AsyncCloudConnection">AsyncCloudConnection</a> supports asyncio, whereas <a href="../CloudConnection">CloudConnection</a> is completely synchronous.</li>
+<li><strong>cloud_host</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>) - The hostname of the server where the cloud variables are hosted. By default, this is <code class="highlight"><span class="s2">&quot;clouddata.scratch.mit.edu&quot;</span></code>.</li>
+<li><strong>headers</strong> (<code class="highlight"><span class="nb">dict</span></code>) - Any extra headers to add to the connection's handshake.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="n">CloudConnection</span> <span class="o">|</span> <span class="n">AsyncCloudConnection</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">connection</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">create_cloud_connection</span><span class="p">(</span><span class="mi">104</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">connection</span><span class="o">.</span><span class="n">get_cloud_variable</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">))</span>
+<span class="c1"># 1391203129031</span>
+</code></pre></div>
+<h3 id="explore_projects"><code class="highlight"><span class="n">explore_projects</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;trending&quot;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s2">&quot;en&quot;</span><span class="p">)</span></code><a class="headerlink" href="#explore_projects" title="Permanent link">&para;</a></h3>
+<p>Explores Scratch projects with the specified <code class="highlight"><span class="n">mode</span></code> (either <code class="highlight"><span class="s2">&quot;trending&quot;</span></code>, <code class="highlight"><span class="s2">&quot;popular&quot;</span></code>, or <code class="highlight"><span class="s2">&quot;recent&quot;</span></code>), query and language. Returns an array of <a href="../Project">Project</a> objects.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>mode</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;trending&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;popular&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;recent&quot;</span><span class="p">]]</span></code>) - The basis of how the projects are sorted - "trending" projects were popular recently, "popular" projects are popular in general, and "recent" projects are recent in general.</li>
+<li><strong>query</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>) - The query used to search for the projects.</li>
+<li><strong>language</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>) - The language to search for projects in. Must be an <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a> code.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">list</span><span class="p">[</span><span class="n">Project</span><span class="p">]</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">explore_projects</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+<span class="c1"># Epic 7D platformer 2021</span>
+</code></pre></div>
+<h3 id="explore_studios"><code class="highlight"><span class="n">explore_studios</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;trending&quot;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">)</span></code><a class="headerlink" href="#explore_studios" title="Permanent link">&para;</a></h3>
+<p>Explores Scratch studios with the specified <code class="highlight"><span class="n">mode</span></code> (either <code class="highlight"><span class="s2">&quot;trending&quot;</span></code>, <code class="highlight"><span class="s2">&quot;popular&quot;</span></code>, or <code class="highlight"><span class="s2">&quot;recent&quot;</span></code>) and query. Returns an array of <a href="../Studio">Studio</a> objects.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>mode</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;trending&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;popular&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;recent&quot;</span><span class="p">]]</span></code>) - The basis of how the studios are sorted - "trending" studios were popular recently, "popular" studios are popular in general, and "recent" studios are recent in general.</li>
+<li><strong>query</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>) - The query used to search for the studios.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">list</span><span class="p">[</span><span class="n">Studio</span><span class="p">]</span></code></p>
+<h3 id="search_projects"><code class="highlight"><span class="n">search_projects</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;popular&quot;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s2">&quot;en&quot;</span><span class="p">)</span></code><a class="headerlink" href="#search_projects" title="Permanent link">&para;</a></h3>
+<p>Searches Scratch projects with the specified <code class="highlight"><span class="n">mode</span></code> (either <code class="highlight"><span class="s2">&quot;trending&quot;</span></code> or <code class="highlight"><span class="s2">&quot;popular&quot;</span></code>), <code class="highlight"><span class="n">query</span></code>, and <code class="highlight"><span class="n">language</span></code>. Returns an array of <a href="../Project">Project</a> objects.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>mode</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;trending&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;popular&quot;</span><span class="p">]]</span></code>) - The basis of how the projects are sorted - "trending" projects were popular recently and "popular" projects are popular in general.</li>
+<li><strong>query</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>) - The query used to search for the projects.</li>
+<li><strong>language</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>) - The language to search for projects in. Must be an <a href="https://en.wikipedia.org/wiki/ISO_639-1">ISO 639-1</a> code.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">list</span><span class="p">[</span><span class="n">Project</span><span class="p">]</span></code></p>
+<h3 id="search_studios"><code class="highlight"><span class="n">search_studios</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;popular&quot;</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">)</span></code><a class="headerlink" href="#search_studios" title="Permanent link">&para;</a></h3>
+<p>Searches Scratch studios with the specified <code class="highlight"><span class="n">mode</span></code> and <code class="highlight"><span class="n">query</span></code>. Returns an array of <a href="../Studio">Studio</a> objects.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>mode</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;trending&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;popular&quot;</span><span class="p">]])</span></code> - The basis of how the studios are sorted - "trending" studios were popular recently and "popular" studios are popular in general.</li>
+<li><strong>query</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>) - The query used to search for the studios.</li>
+</ul>
+<h3 id="get_front_page"><code class="highlight"><span class="n">get_front_page</span><span class="p">()</span></code><a class="headerlink" href="#get_front_page" title="Permanent link">&para;</a></h3>
+<p>Gets the data that is used for Scratch's front page. It returns a dictionary containing the following items:</p>
+<ul>
+<li><code class="highlight"><span class="s2">&quot;featured_projects&quot;</span></code> - Scratch's featured projects; an array of <a href="../IncompleteProject">IncompleteProject</a> objects.</li>
+<li><code class="highlight"><span class="s2">&quot;featured_studios&quot;</span></code> - Scratch's featured studios; an array of <a href="../IncompleteStudio">IncompleteStudio</a> objects.</li>
+<li><code class="highlight"><span class="s2">&quot;top_loved&quot;</span></code> - the most loved recent projects; an array of <a href="../IncompleteProject">IncompleteProject</a> objects.</li>
+<li><code class="highlight"><span class="s2">&quot;top_remixed&quot;</span></code> - the most remixed recent projects; an array of <a href="../IncompleteProject">IncompleteProject</a> objects.</li>
+<li><code class="highlight"><span class="s2">&quot;newest&quot;</span></code> - new projects on Scratch; an array of <a href="../IncompleteProject">IncompleteProject</a> objects.</li>
+<li><code class="highlight"><span class="s2">&quot;scratch_design_studio&quot;</span></code> - projects in Scratch's Scratch Design Studio that are on the front page; an array of <a href="../IncompleteProject">IncompleteProject</a> objects.</li>
+<li><code class="highlight"><span class="s2">&quot;curated&quot;</span></code> - projects chosen by the Front Page Curator to be on the front page; an array of <a href="../IncompleteProject">IncompleteProject</a> objects.</li>
+<li><code class="highlight"><span class="s2">&quot;curator&quot;</span></code> - the current Front Page Curator; a <code class="highlight"><span class="nb">str</span></code> representing their username.</li>
+<li><code class="highlight"><span class="s2">&quot;current_sds&quot;</span></code> - the current Scratch Design Studio; an <a href="../IncompleteStudio">IncompleteStudio</a> object.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">dict</span></code></p>
+<h3 id="get_activity"><code class="highlight"><span class="n">get_activity</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code><a class="headerlink" href="#get_activity" title="Permanent link">&para;</a></h3>
+<p>Gets your follower's activity (the What's Happening? on the front page). You must be logged in for this to not throw an error. Returns an array of <a href="../Activity">Activity</a> objects.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>limit</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>) - How many activities to retrieve.</li>
+<li><strong>offset</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>) - The offset of the activities from the newest ones - i.e. an offset of 5 would give you the next 5 activites after the first 5.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">list</span><span class="p">[</span><span class="n">Activity</span><span class="p">]</span></code></p>
+<h3 id="create_project"><code class="highlight"><span class="n">create_project</span><span class="p">(</span><span class="n">project</span><span class="p">)</span></code><a class="headerlink" href="#create_project" title="Permanent link">&para;</a></h3>
+<p>Creates a project. You must be logged in for this to not throw an error. The project will contain the data in the parameter <code class="highlight"><span class="n">project</span></code>, which should be structured like the <code>project.json</code> file in ordinary projects. Returns the ID of the project as an <code class="highlight"><span class="nb">int</span></code>.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>project</strong> (<code class="highlight"><span class="nb">dict</span></code>) - The data to be put into the project.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">int</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">project_json</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;targets&quot;</span><span class="p">:[{</span><span class="s2">&quot;isStage&quot;</span><span class="p">:</span><span class="kc">True</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Stage&quot;</span><span class="p">,</span><span class="s2">&quot;variables&quot;</span><span class="p">:{</span><span class="s2">&quot;`jEk@4|i[#Fk?(8x)AV.-my variable&quot;</span><span class="p">:[</span><span class="s2">&quot;my variable&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">]},</span><span class="s2">&quot;lists&quot;</span><span class="p">:{},</span><span class="s2">&quot;broadcasts&quot;</span><span class="p">:{},</span><span class="s2">&quot;blocks&quot;</span><span class="p">:{},</span><span class="s2">&quot;comments&quot;</span><span class="p">:{},</span><span class="s2">&quot;currentCostume&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;costumes&quot;</span><span class="p">:[{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;backdrop1&quot;</span><span class="p">,</span><span class="s2">&quot;dataFormat&quot;</span><span class="p">:</span><span class="s2">&quot;svg&quot;</span><span class="p">,</span><span class="s2">&quot;assetId&quot;</span><span class="p">:</span><span class="s2">&quot;cd21514d0531fdffb22204e0ec5ed84a&quot;</span><span class="p">,</span><span class="s2">&quot;md5ext&quot;</span><span class="p">:</span><span class="s2">&quot;cd21514d0531fdffb22204e0ec5ed84a.svg&quot;</span><span class="p">,</span><span class="s2">&quot;rotationCenterX&quot;</span><span class="p">:</span><span class="mi">240</span><span class="p">,</span><span class="s2">&quot;rotationCenterY&quot;</span><span class="p">:</span><span class="mi">180</span><span class="p">}],</span><span class="s2">&quot;sounds&quot;</span><span class="p">:[{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;pop&quot;</span><span class="p">,</span><span class="s2">&quot;assetId&quot;</span><span class="p">:</span><span class="s2">&quot;83a9787d4cb6f3b7632b4ddfebf74367&quot;</span><span class="p">,</span><span class="s2">&quot;dataFormat&quot;</span><span class="p">:</span><span class="s2">&quot;wav&quot;</span><span class="p">,</span><span class="s2">&quot;format&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;rate&quot;</span><span class="p">:</span><span class="mi">48000</span><span class="p">,</span><span class="s2">&quot;sampleCount&quot;</span><span class="p">:</span><span class="mi">1123</span><span class="p">,</span><span class="s2">&quot;md5ext&quot;</span><span class="p">:</span><span class="s2">&quot;83a9787d4cb6f3b7632b4ddfebf74367.wav&quot;</span><span class="p">}],</span><span class="s2">&quot;volume&quot;</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span><span class="s2">&quot;layerOrder&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;tempo&quot;</span><span class="p">:</span><span class="mi">60</span><span class="p">,</span><span class="s2">&quot;videoTransparency&quot;</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span><span class="s2">&quot;videoState&quot;</span><span class="p">:</span><span class="s2">&quot;on&quot;</span><span class="p">,</span><span class="s2">&quot;textToSpeechLanguage&quot;</span><span class="p">:</span><span class="kc">None</span><span class="p">},{</span><span class="s2">&quot;isStage&quot;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Sprite1&quot;</span><span class="p">,</span><span class="s2">&quot;variables&quot;</span><span class="p">:{},</span><span class="s2">&quot;lists&quot;</span><span class="p">:{},</span><span class="s2">&quot;broadcasts&quot;</span><span class="p">:{},</span><span class="s2">&quot;blocks&quot;</span><span class="p">:{},</span><span class="s2">&quot;comments&quot;</span><span class="p">:{},</span><span class="s2">&quot;currentCostume&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;costumes&quot;</span><span class="p">:[{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;costume1&quot;</span><span class="p">,</span><span class="s2">&quot;bitmapResolution&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;dataFormat&quot;</span><span class="p">:</span><span class="s2">&quot;svg&quot;</span><span class="p">,</span><span class="s2">&quot;assetId&quot;</span><span class="p">:</span><span class="s2">&quot;bcf454acf82e4504149f7ffe07081dbc&quot;</span><span class="p">,</span><span class="s2">&quot;md5ext&quot;</span><span class="p">:</span><span class="s2">&quot;bcf454acf82e4504149f7ffe07081dbc.svg&quot;</span><span class="p">,</span><span class="s2">&quot;rotationCenterX&quot;</span><span class="p">:</span><span class="mi">48</span><span class="p">,</span><span class="s2">&quot;rotationCenterY&quot;</span><span class="p">:</span><span class="mi">50</span><span class="p">},{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;costume2&quot;</span><span class="p">,</span><span class="s2">&quot;bitmapResolution&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;dataFormat&quot;</span><span class="p">:</span><span class="s2">&quot;svg&quot;</span><span class="p">,</span><span class="s2">&quot;assetId&quot;</span><span class="p">:</span><span class="s2">&quot;0fb9be3e8397c983338cb71dc84d0b25&quot;</span><span class="p">,</span><span class="s2">&quot;md5ext&quot;</span><span class="p">:</span><span class="s2">&quot;0fb9be3e8397c983338cb71dc84d0b25.svg&quot;</span><span class="p">,</span><span class="s2">&quot;rotationCenterX&quot;</span><span class="p">:</span><span class="mi">46</span><span class="p">,</span><span class="s2">&quot;rotationCenterY&quot;</span><span class="p">:</span><span class="mi">53</span><span class="p">}],</span><span class="s2">&quot;sounds&quot;</span><span class="p">:[{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Meow&quot;</span><span class="p">,</span><span class="s2">&quot;assetId&quot;</span><span class="p">:</span><span class="s2">&quot;83c36d806dc92327b9e7049a565c6bff&quot;</span><span class="p">,</span><span class="s2">&quot;dataFormat&quot;</span><span class="p">:</span><span class="s2">&quot;wav&quot;</span><span class="p">,</span><span class="s2">&quot;format&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;rate&quot;</span><span class="p">:</span><span class="mi">48000</span><span class="p">,</span><span class="s2">&quot;sampleCount&quot;</span><span class="p">:</span><span class="mi">40681</span><span class="p">,</span><span class="s2">&quot;md5ext&quot;</span><span class="p">:</span><span class="s2">&quot;83c36d806dc92327b9e7049a565c6bff.wav&quot;</span><span class="p">}],</span><span class="s2">&quot;volume&quot;</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span><span class="s2">&quot;layerOrder&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;visible&quot;</span><span class="p">:</span><span class="kc">True</span><span class="p">,</span><span class="s2">&quot;x&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;y&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;size&quot;</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span><span class="s2">&quot;direction&quot;</span><span class="p">:</span><span class="mi">90</span><span class="p">,</span><span class="s2">&quot;draggable&quot;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span><span class="s2">&quot;rotationStyle&quot;</span><span class="p">:</span><span class="s2">&quot;all around&quot;</span><span class="p">}],</span><span class="s2">&quot;monitors&quot;</span><span class="p">:[],</span><span class="s2">&quot;extensions&quot;</span><span class="p">:[],</span><span class="s2">&quot;meta&quot;</span><span class="p">:{</span><span class="s2">&quot;semver&quot;</span><span class="p">:</span><span class="s2">&quot;3.0.0&quot;</span><span class="p">,</span><span class="s2">&quot;vm&quot;</span><span class="p">:</span><span class="s2">&quot;0.2.0-prerelease.20220601111129&quot;</span><span class="p">,</span><span class="s2">&quot;agent&quot;</span><span class="p">:</span><span class="s2">&quot;Mozilla/5.0 (X11; CrOS x86_64 14588.123.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.72 Safari/537.36&quot;</span><span class="p">}}</span>
+
+<span class="n">project_id</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">create_project</span><span class="p">(</span><span class="n">project</span><span class="p">)</span>
+<span class="n">session</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="n">project_id</span><span class="p">)</span><span class="o">.</span><span class="n">share</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="create_studio"><code class="highlight"><span class="n">create_studio</span><span class="p">()</span></code><a class="headerlink" href="#create_studio" title="Permanent link">&para;</a></h3>
+<p>Creates a studio. You must be logged in for this to not throw an error. Returns the ID of the studio as an <code class="highlight"><span class="nb">int</span></code>.</p>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">int</span></code></p>
+<h3 id="empty_trash"><code class="highlight"><span class="n">empty_trash</span><span class="p">(</span><span class="n">password</span><span class="p">)</span></code><a class="headerlink" href="#empty_trash" title="Permanent link">&para;</a></h3>
+<p>Empties your trash (your deleted projects). You must be logged in for this to not throw an error.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>password</strong> (<code class="highlight"><span class="nb">str</span></code>) - The password to your account. It's necessary to authenticate this for obvious reasons.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">session</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="mi">104</span><span class="p">)</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+<span class="n">session</span><span class="o">.</span><span class="n">empty_trash</span><span class="p">(</span><span class="s2">&quot;hunter2&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="get_own_projects"><code class="highlight"><span class="n">get_own_projects</span><span class="p">(</span><span class="nb">all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></code><a class="headerlink" href="#get_own_projects" title="Permanent link">&para;</a></h3>
+<p>Gets your own projects, sorted in descending order. You must be logged in for this to not throw an error. Returns an array of <a href="../Project">Project</a> objects.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>all</strong> (<code class="highlight"><span class="n">Optiona</span><span class="p">[</span><span class="n">boo</span><span class="p">]</span><span class="n">l</span></code>) - Whether to retrieve a single page of projects or all of them.</li>
+<li><strong>sort</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;view_count&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;love_count&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;remixers_count&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]]</span></code>) - The metric used to sort the projects. Must be one of the following:<ul>
+<li><code class="highlight"><span class="s2">&quot;&quot;</span></code></li>
+<li><code class="highlight"><span class="s2">&quot;view_count&quot;</span></code></li>
+<li><code class="highlight"><span class="s2">&quot;love_count&quot;</span></code></li>
+<li><code class="highlight"><span class="s2">&quot;remixers_count&quot;</span></code></li>
+<li><code class="highlight"><span class="s2">&quot;title&quot;</span></code></li>
+</ul>
+</li>
+</ul>
+<p>If it is an empty string, it will be sorted by the date the project was modified.</p>
+<ul>
+<li><strong>filter</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;all&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;shared&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;notshared&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;trashed&quot;</span><span class="p">]]</span></code>) - What the projects are filtered by. Must be one of the following:<ul>
+<li><code class="highlight"><span class="s2">&quot;all&quot;</span></code></li>
+<li><code class="highlight"><span class="s2">&quot;shared&quot;</span></code></li>
+<li><code class="highlight"><span class="s2">&quot;notshared&quot;</span></code></li>
+<li><code class="highlight"><span class="s2">&quot;trashed&quot;</span></code></li>
+</ul>
+</li>
+<li><strong>page</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>) - The page of the data - page 1 has the projects that would be top, and they descend from there. Each page has 40 projects.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">list</span><span class="p">[</span><span class="n">Project</span><span class="p">]</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;My most loved deleted project is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">session</span><span class="o">.</span><span class="n">get_own_projects</span><span class="p">(</span><span class="n">sort</span><span class="o">=</span><span class="s2">&quot;love_count&quot;</span><span class="p">,</span> <span class="nb">filter</span><span class="o">=</span><span class="s2">&quot;trashed&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">id</span><span class="p">))</span>
+<span class="c1"># My most loved deleted project is 104</span>
+</code></pre></div>
+<h3 id="get_own_studios"><code class="highlight"><span class="n">get_own_studios</span><span class="p">(</span><span class="nb">all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></code><a class="headerlink" href="#get_own_studios" title="Permanent link">&para;</a></h3>
+<p>Gets your own studios, sorted in descending order. You must be logged in for this to not throw an error. Returns an array of <a href="../Studio">Studio</a> objects. Note that the <code class="highlight"><span class="n">Studio</span></code> objects that are returned do not have a <code class="highlight"><span class="n">follower_count</span></code> or <code class="highlight"><span class="n">manager_count</span></code> attribute but they do have a <code class="highlight"><span class="n">curator_count</span></code> attribute.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>all</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span></code>) - Whether to retrieve a single page of studios or all of them.</li>
+<li><strong>sort</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;projecters_count&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]]</span></code>) - The metric used to sort the studios. Must be either <code class="highlight"><span class="s2">&quot;&quot;</span></code>, <code class="highlight"><span class="s2">&quot;projecters_count&quot;</span></code>, or <code class="highlight"><span class="s2">&quot;title&quot;</span></code>. If it is an empty string, it will be sorted by the date the studio was modified.</li>
+<li><strong>page</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>) - The page of the data - page 1 has the studios that would be top, and they descend from there. Each page has 40 studios.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">list</span><span class="p">[</span><span class="n">Studio</span><span class="p">]</span></code></p>
+<h3 id="upload_asset"><code class="highlight"><span class="n">upload_asset</span><span class="p">(</span><span class="n">asset</span><span class="p">,</span> <span class="n">file_ext</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code><a class="headerlink" href="#upload_asset" title="Permanent link">&para;</a></h3>
+<p>Uploads an asset to <code>assets.scratch.mit.edu</code>. You must be logged in for this to not throw an error.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>asset</strong> (<code class="highlight"><span class="nb">bytes</span> <span class="o">|</span> <span class="nb">str</span></code>) - The asset that should be uploaded. If it is an instance of <code class="highlight"><span class="nb">bytes</span></code>, it will be interpreted as binary data, but if it is a <code class="highlight"><span class="nb">str</span></code>, it will be intepreted as a path to a file.</li>
+<li><strong>file_ext</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span></code>) - The file extension of the asset. It is only necessary when the <code class="highlight"><span class="n">asset</span></code> parameter is a file name.</li>
+</ul>
+<h3 id="change_country"><code class="highlight"><span class="n">change_country</span><span class="p">(</span><span class="n">country</span><span class="p">)</span></code><a class="headerlink" href="#change_country" title="Permanent link">&para;</a></h3>
+<p>Changes the logged in user's country. You must be logged in for this to not throw an error.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>country</strong> (<code class="highlight"><span class="nb">str</span></code>) - The country that your country should be changed to.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">session</span><span class="o">.</span><span class="n">change_country</span><span class="p">(</span><span class="s2">&quot;Antarctica&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="change_password"><code class="highlight"><span class="n">change_password</span><span class="p">(</span><span class="n">old_password</span><span class="p">,</span> <span class="n">new_password</span><span class="p">)</span></code><a class="headerlink" href="#change_password" title="Permanent link">&para;</a></h3>
+<p>Changes the logged in user's account's password. You must be logged in for this to not throw an error.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>old_password</strong> (<code class="highlight"><span class="nb">str</span></code>) - Your account's current password (for authentication).</li>
+<li><strong>new_password</strong> (<code class="highlight"><span class="nb">str</span></code>) - The password you want your account's password to be changed to.</li>
+</ul>
+<h3 id="change_email"><code class="highlight"><span class="n">change_email</span><span class="p">(</span><span class="n">new_email</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span></code><a class="headerlink" href="#change_email" title="Permanent link">&para;</a></h3>
+<p>Changes the logged in user's account's email. You must be logged in for this to not throw an error.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>new_emaiil</strong> (<code class="highlight"><span class="nb">str</span></code>) - The email you want your account's email to be changed to.</li>
+<li><strong>password</strong> (<code class="highlight"><span class="nb">str</span></code>) - Your account's password (for authentication).</li>
+</ul>
+<h3 id="change_email_subscription"><code class="highlight"><span class="n">change_email_subscription</span><span class="p">(</span><span class="n">activities</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">teacher_tips</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code><a class="headerlink" href="#change_email_subscription" title="Permanent link">&para;</a></h3>
+<p>Sets what you will receive emails from Scratch for. You must be logged in for this to not throw an error.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>activities</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span></code>) - Whether you'll receive emails for activity ideas for using Scratch at home.</li>
+<li><strong>teacher_tips</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span></code>) - Whether you'll receive emails about product updates for using Scratch in educational settings.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">session</span><span class="o">.</span><span class="n">change_email_subscription</span><span class="p">(</span><span class="n">teacher_tips</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Now I will receive emails about product updates for using Scratch in educational settings</span>
+</code></pre></div>
+<h3 id="get_backpack"><code class="highlight"><span class="n">get_backpack</span><span class="p">(</span><span class="nb">all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code><a class="headerlink" href="#get_backpack" title="Permanent link">&para;</a></h3>
+<p>Gets the data in your backpack. You must be logged in for thsi to not throw an error. Returns an array of <a href="../BackpackItem">BackpackItem</a> objects.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>all</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span></code>) - Whether to retrieve everything in your backpack or just <code class="highlight"><span class="n">limit</span></code> items.</li>
+<li><strong>limit</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>) - How many items to retrieve if <code class="highlight"><span class="nb">all</span></code> is <code class="highlight"><span class="kc">False</span></code>.</li>
+<li><strong>offset</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>) - The offset of the items from the newest ones - i.e. an offset of 20 would give you the next 20 items after the first 20.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">list</span><span class="p">[</span><span class="n">BackpackItem</span><span class="p">]</span></code></p>
+<h3 id="add_to_backpack"><code class="highlight"><span class="n">add_to_backpack</span><span class="p">(</span><span class="n">item_type</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">mime_type</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">thumbnail</span><span class="p">)</span></code><a class="headerlink" href="#add_to_backpack" title="Permanent link">&para;</a></h3>
+<p>Adds an item to your backpack. You must be logged in for this to not throw an error. Returns the item put into the backpack as a <a href="../BackpackItem">BackpackItem</a> object.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>item_type</strong> (<code class="highlight"><span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;script&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;costume&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;sound&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;sprite&quot;</span><span class="p">]</span></code>) - The type of item to be put in the backpack. Must be one of the following:<ul>
+<li><code class="highlight"><span class="s2">&quot;script&quot;</span></code></li>
+<li><code class="highlight"><span class="s2">&quot;costume&quot;</span></code></li>
+<li><code class="highlight"><span class="s2">&quot;sound&quot;</span></code></li>
+<li><code class="highlight"><span class="s2">&quot;sprite&quot;</span></code></li>
+</ul>
+</li>
+<li><strong>body</strong> (<code class="highlight"><span class="nb">str</span></code>) - The base-64-encoded data in the item. If the <code class="highlight"><span class="n">item_type</span></code> of the item is <code class="highlight"><span class="s2">&quot;script&quot;</span></code> the data must be in the format that it is in the <code>project.json</code> file in ordinary projects. If the <code class="highlight"><span class="n">item_type</span></code> is <code class="highlight"><span class="s2">&quot;sprite&quot;</span></code>, it must be a zipped version of the data in the format that it is in the <code>project.json</code> file in ordinary projects. Otherwise, it just has to be the data in the image of the costume or the sound file.</li>
+<li><strong>mime_type</strong> (<code class="highlight"><span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;application/zip&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;application/json&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;audio/x-wav&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;audio/mp3&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;image/svg+xml&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;image/png&quot;</span><span class="p">]</span></code>) - The <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a> of the data. If the <code class="highlight"><span class="n">item_type</span></code> is <code class="highlight"><span class="s2">&quot;script&quot;</span></code>, this must be <code class="highlight"><span class="s2">&quot;application/json&quot;</span></code>; if the <code class="highlight"><span class="n">item_type</span></code> is <code class="highlight"><span class="s2">&quot;sprite&quot;</span></code>, this must be <code class="highlight"><span class="s2">&quot;application/zip&quot;</span></code>; if the <code class="highlight"><span class="n">item_type</span></code> is <code class="highlight"><span class="s2">&quot;costume&quot;</span></code>, this must be <code class="highlight"><span class="s2">&quot;image/svg+xml&quot;</span></code> or <code class="highlight"><span class="s2">&quot;image/png&quot;</span></code>; and if the <code class="highlight"><span class="n">item_type</span></code> is <code class="highlight"><span class="s2">&quot;sound&quot;</span></code>, this must be <code class="highlight"><span class="s2">&quot;audio/mp3&quot;</span></code> or <code class="highlight"><span class="s2">&quot;audio/x-wav&quot;</span></code>.</li>
+<li><strong>name</strong> (<code class="highlight"><span class="nb">str</span></code>) - The name of the item to be added to the backpack. If the <code class="highlight"><span class="n">item_type</span></code> is <code class="highlight"><span class="s2">&quot;costume&quot;</span></code>, <code class="highlight"><span class="s2">&quot;sound&quot;</span></code>, or <code class="highlight"><span class="s2">&quot;sprite&quot;</span></code>, this is merely the name of the costume, sound, or sprite. If the <code class="highlight"><span class="n">item_type</span></code> is <code class="highlight"><span class="s2">&quot;script&quot;</span></code>, this must be the string <code class="highlight"><span class="s2">&quot;code&quot;</span></code>.</li>
+<li><strong>thumbnail</strong> (<code class="highlight"><span class="nb">str</span></code>) - The base-64-encoded thumbnail of the item to be put in the backpack.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="n">BackpackItem</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">base64</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+
+<span class="n">costume_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;furry.png&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
+<span class="n">body</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">costume_file</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+
+<span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;furry.png&quot;</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">BytesIO</span><span class="p">()</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">image</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;JPEG&quot;</span><span class="p">)</span>
+    <span class="n">thumbnail</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">getvalue</span><span class="p">())</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">add_to_backpack</span><span class="p">(</span><span class="s2">&quot;costume&quot;</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="s2">&quot;image/png&quot;</span><span class="p">,</span> <span class="s2">&quot;furry&quot;</span><span class="p">,</span> <span class="n">thumbnail</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="get_statistics"><code class="highlight"><span class="n">get_statistics</span><span class="p">()</span></code><a class="headerlink" href="#get_statistics" title="Permanent link">&para;</a></h3>
+<p>Gets site statistics for Scratch. Returns a dictionary with the following items:</p>
+<ul>
+<li><code class="highlight"><span class="s2">&quot;overall&quot;</span></code> - Overall data for Scratch; a dictionary with the following items:<ul>
+<li><code class="highlight"><span class="s2">&quot;COMMENT_COUNT&quot;</span></code> - The total number of comments on the site.</li>
+<li><code class="highlight"><span class="s2">&quot;PROFILE_COMMENT_COUNT</span></code>" - The total number of profile comments on the site.</li>
+<li><code class="highlight"><span class="s2">&quot;PROJECT_COMMENT_COUNT&quot;</span></code> - The total number of project comments on the site.</li>
+<li><code class="highlight"><span class="s2">&quot;STUDIO_COMMENT_COUNT&quot;</span></code> - The total number of studio comments on the site.</li>
+<li><code class="highlight"><span class="s2">&quot;USER_COUNT&quot;</span></code> - The total number of users on the site.</li>
+<li><code class="highlight"><span class="s2">&quot;PROJECT_COUNT&quot;</span></code> - The total number of projects on the site.</li>
+<li><code class="highlight"><span class="s2">&quot;STUDIO_COUNT&quot;</span></code> - The total number of studios on the site.</li>
+</ul>
+</li>
+<li><code class="highlight"><span class="s2">&quot;last_month&quot;</span></code> - Site data for the past month; a dictionary with the following items:<ul>
+<li><code class="highlight"><span class="s2">&quot;pageviews&quot;</span></code> - The number of page views for Scratch over the past month.</li>
+<li><code class="highlight"><span class="s2">&quot;visits&quot;</span></code> - The number of visits to Scratch's website over the past month.</li>
+<li><code class="highlight"><span class="s2">&quot;users&quot;</span></code> - The number of unique visitors to Scratch over the past month.</li>
+</ul>
+</li>
+<li>
+<p><code class="highlight"><span class="s2">&quot;over_time&quot;</span></code> - Site data for Scratch over time, containing the data used to create graphs; a dictionary with the following items:
+    <div class="fun-fact-country-parent"></p>
+<ul>
+<li><code class="highlight"><span class="s2">&quot;activity_data&quot;</span></code> - Activity trends for Scratch over time. An array of dictionaries with the items <code class="highlight"><span class="s2">&quot;color&quot;</span></code> (a hex code), <code class="highlight"><span class="s2">&quot;key&quot;</span></code> (a <code class="highlight"><span class="nb">str</span></code>), and <code class="highlight"><span class="s2">&quot;values&quot;</span></code> (an array full of dictionaries containing X and Y coordinates).</li>
+<li><code class="highlight"><span class="s2">&quot;active_user_data&quot;</span></code> - Data on monthly active users on Scratch. An array of dictionaries with the items <code class="highlight"><span class="s2">&quot;color&quot;</span></code> (a hex code), <code class="highlight"><span class="s2">&quot;key&quot;</span></code> (a <code class="highlight"><span class="nb">str</span></code>), and <code class="highlight"><span class="s2">&quot;values&quot;</span></code> (an array full of dictionaries containing X and Y coordinates).</li>
+<li><code class="highlight"><span class="s2">&quot;age_distribution_data&quot;</span></code> - Data on the age distribution of new Scratchers. A dict with the following items:<ul>
+<li><code class="highlight"><span class="s2">&quot;key&quot;</span></code> - A <code class="highlight"><span class="nb">str</span></code> with the value <code class="highlight"><span class="s2">&quot;Registration age of Scratchers&quot;</span></code>.</li>
+<li><code class="highlight"><span class="s2">&quot;values&quot;</span></code> - An array full of dictionaries containing X and Y coordinates used to draw a histogram.</li>
+</ul>
+</li>
+<li>
+<p><code class="highlight"><span class="s2">&quot;country_distribution&quot;</span></code> - Data on the distribution of the locations of Scratchers. A dictionary with an item for each country, the value being the number of users from the country.</p>
+</li>
+<li>
+<div class="admonition fun-fact">
+<p class="admonition-title">Fun Fact<p>There used to be a bug allowing people to change their country to a two-letter code, and the data for those "countries" is still returned here. It also appears that a similar bug was used for 11 people to change their location to "England". Sadly, this bug does not work anymore.</p>
+</p>
+</div>
+</li>
+<li>
+<p><code class="highlight"><span class="s2">&quot;comment_data&quot;</span></code> - Data on distribution of location of comment activity. An array of dictionaries with the items <code class="highlight"><span class="s2">&quot;color&quot;</span></code> (a hex code), <code class="highlight"><span class="s2">&quot;key&quot;</span></code> (a <code class="highlight"><span class="nb">str</span></code>), and <code class="highlight"><span class="s2">&quot;values&quot;</span></code> (an array full of dictionaries containing X and Y coordinates).</p>
+</li>
+<li><code class="highlight"><span class="s2">&quot;project_data&quot;</span></code> - Data on shared projects, representing the distribution of original projects vs. remixed projects. An array of dictionaries with the items <code class="highlight"><span class="s2">&quot;color&quot;</span></code> (a hex code), <code class="highlight"><span class="s2">&quot;key&quot;</span></code> (a <code class="highlight"><span class="nb">str</span></code>), and <code class="highlight"><span class="s2">&quot;values&quot;</span></code> (an array full of dictionaries containing X and Y coordinates).
+</div></li>
+</ul>
+</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">dict</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="s2">&quot;There have been </span><span class="si">{}</span><span class="s2"> users registered who are from England&quot;</span><span class="p">,</span>
+    <span class="n">session</span><span class="o">.</span><span class="n">get_statistics</span><span class="p">()[</span><span class="s2">&quot;over_time&quot;</span><span class="p">][</span><span class="s2">&quot;country_distribution&quot;</span><span class="p">][</span><span class="s2">&quot;England&quot;</span><span class="p">],</span>
+<span class="p">))</span>
+<span class="c1"># There have been 11 users registered who are from England</span>
+</code></pre></div>
+<h3 id="is_valid_username"><code class="highlight"><span class="n">is_valid_username</span><span class="p">(</span><span class="n">username</span><span class="p">)</span></code><a class="headerlink" href="#is_valid_username" title="Permanent link">&para;</a></h3>
+<p>Checks if a username can be registered. Returns a <code class="highlight"><span class="nb">bool</span></code> representing whether it can.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>username</strong> (<code class="highlight"><span class="nb">str</span></code>) - The username to be checked for availability.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">bool</span></code></p>
+<h3 id="check_password"><code class="highlight"><span class="n">check_password</span><span class="p">(</span><span class="n">password</span><span class="p">)</span></code><a class="headerlink" href="#check_password" title="Permanent link">&para;</a></h3>
+<p>Checks if the password passed is your account's password. You must be logged in for this to not throw an error. Returns a <code class="highlight"><span class="nb">bool</span></code> representing whether the password is valid.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>password</strong> (<code class="highlight"><span class="nb">str</span></code>) - The password to be checked for validity.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">bool</span></code></p>
+<h3 id="logout"><code class="highlight"><span class="n">logout</span><span class="p">()</span></code><a class="headerlink" href="#logout" title="Permanent link">&para;</a></h3>
+<p>Logs out of Scratch. You must be logged in for this to not throw an error.</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../../examples/simultaneous-connections/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Simultaneous Connections" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Simultaneous Connections
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../User/" class="md-footer__link md-footer__link--next" aria-label="Next: User" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              User
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>

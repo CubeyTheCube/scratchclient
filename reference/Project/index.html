@@ -1,0 +1,1784 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://CubeyTheCube.github.io/scratchclient/reference/Project/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Project - scratchclient docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#02a6f2">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-blue" data-md-color-accent="amber">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#project" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="scratchclient docs" class="md-header__button md-logo" aria-label="scratchclient docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            scratchclient docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Project
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CubeyTheCube/scratchclient" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CubeyTheCube/scratchclient
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="scratchclient docs" class="md-nav__button md-logo" aria-label="scratchclient docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    scratchclient docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CubeyTheCube/scratchclient" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CubeyTheCube/scratchclient
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Examples" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/basic-usage/" class="md-nav__link">
+        Basic Usage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/stats-viewer/" class="md-nav__link">
+        Stats Viewer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/simultaneous-connections/" class="md-nav__link">
+        Simultaneous Connections
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          API Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ScratchSession/" class="md-nav__link">
+        ScratchSession
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../User/" class="md-nav__link">
+        User
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Project
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Project
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#title" class="md-nav__link">
+    title
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    instructions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visible" class="md-nav__link">
+    visible
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#public" class="md-nav__link">
+    public
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comments_allowed" class="md-nav__link">
+    comments_allowed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is_published" class="md-nav__link">
+    is_published
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#author" class="md-nav__link">
+    author
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thumbnail_URL" class="md-nav__link">
+    thumbnail_URL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#created_timestamp" class="md-nav__link">
+    created_timestamp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#last_modified_timestamp" class="md-nav__link">
+    last_modified_timestamp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared_timestamp" class="md-nav__link">
+    shared_timestamp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view_count" class="md-nav__link">
+    view_count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#love_count" class="md-nav__link">
+    love_count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#favorite_count" class="md-nav__link">
+    favorite_count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remix_count" class="md-nav__link">
+    remix_count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parent" class="md-nav__link">
+    parent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root" class="md-nav__link">
+    root
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is_remix" class="md-nav__link">
+    is_remix
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get_comment" class="md-nav__link">
+    get_comment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#love" class="md-nav__link">
+    love
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unlove" class="md-nav__link">
+    unlove
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#favorite" class="md-nav__link">
+    favorite
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unfavorite" class="md-nav__link">
+    unfavorite
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_scripts" class="md-nav__link">
+    get_scripts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save" class="md-nav__link">
+    save
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_remixes" class="md-nav__link">
+    get_remixes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_studios" class="md-nav__link">
+    get_studios
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_remixtree" class="md-nav__link">
+    get_remixtree
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_comments" class="md-nav__link">
+    get_comments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_cloud_logs" class="md-nav__link">
+    get_cloud_logs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post_comment" class="md-nav__link">
+    post_comment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_visibility" class="md-nav__link">
+    get_visibility
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toggle_comments" class="md-nav__link">
+    toggle_comments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#turn_on_commenting" class="md-nav__link">
+    turn_on_commenting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#turn_off_commenting" class="md-nav__link">
+    turn_off_commenting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#report" class="md-nav__link">
+    report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unshare" class="md-nav__link">
+    unshare
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#share" class="md-nav__link">
+    share
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore_deleted" class="md-nav__link">
+    restore_deleted
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view" class="md-nav__link">
+    view
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_thumbnail" class="md-nav__link">
+    set_thumbnail
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_title" class="md-nav__link">
+    title
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_instructions" class="md-nav__link">
+    set_instructions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_description" class="md-nav__link">
+    set_description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Studio/" class="md-nav__link">
+        Studio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UserProfile/" class="md-nav__link">
+        UserProfile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IncompleteUser/" class="md-nav__link">
+        IncompleteUser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IncompleteProject/" class="md-nav__link">
+        IncompleteProject
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IncompleteStudio/" class="md-nav__link">
+        IncompleteStudio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RemixtreeProject/" class="md-nav__link">
+        RemixtreeProject
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProfileComment/" class="md-nav__link">
+        ProfileComment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProjectComment/" class="md-nav__link">
+        ProjectComment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StudioComment/" class="md-nav__link">
+        StudioComment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../News/" class="md-nav__link">
+        News
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Message/" class="md-nav__link">
+        Message
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Activity/" class="md-nav__link">
+        Activity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ForumSession/" class="md-nav__link">
+        ForumSession
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ForumPost/" class="md-nav__link">
+        ForumPost
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ScrapingSession/" class="md-nav__link">
+        ScrapingSession
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BackpackItem/" class="md-nav__link">
+        BackpackItem
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CloudConnection/" class="md-nav__link">
+        CloudConnection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AsyncCloudConnection/" class="md-nav__link">
+        AsyncCloudConnection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CloudVariable/" class="md-nav__link">
+        CloudVariable
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#title" class="md-nav__link">
+    title
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    instructions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visible" class="md-nav__link">
+    visible
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#public" class="md-nav__link">
+    public
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comments_allowed" class="md-nav__link">
+    comments_allowed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is_published" class="md-nav__link">
+    is_published
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#author" class="md-nav__link">
+    author
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thumbnail_URL" class="md-nav__link">
+    thumbnail_URL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#created_timestamp" class="md-nav__link">
+    created_timestamp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#last_modified_timestamp" class="md-nav__link">
+    last_modified_timestamp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared_timestamp" class="md-nav__link">
+    shared_timestamp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view_count" class="md-nav__link">
+    view_count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#love_count" class="md-nav__link">
+    love_count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#favorite_count" class="md-nav__link">
+    favorite_count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remix_count" class="md-nav__link">
+    remix_count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parent" class="md-nav__link">
+    parent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root" class="md-nav__link">
+    root
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is_remix" class="md-nav__link">
+    is_remix
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get_comment" class="md-nav__link">
+    get_comment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#love" class="md-nav__link">
+    love
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unlove" class="md-nav__link">
+    unlove
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#favorite" class="md-nav__link">
+    favorite
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unfavorite" class="md-nav__link">
+    unfavorite
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_scripts" class="md-nav__link">
+    get_scripts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save" class="md-nav__link">
+    save
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_remixes" class="md-nav__link">
+    get_remixes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_studios" class="md-nav__link">
+    get_studios
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_remixtree" class="md-nav__link">
+    get_remixtree
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_comments" class="md-nav__link">
+    get_comments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_cloud_logs" class="md-nav__link">
+    get_cloud_logs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post_comment" class="md-nav__link">
+    post_comment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_visibility" class="md-nav__link">
+    get_visibility
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toggle_comments" class="md-nav__link">
+    toggle_comments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#turn_on_commenting" class="md-nav__link">
+    turn_on_commenting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#turn_off_commenting" class="md-nav__link">
+    turn_off_commenting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#report" class="md-nav__link">
+    report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unshare" class="md-nav__link">
+    unshare
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#share" class="md-nav__link">
+    share
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore_deleted" class="md-nav__link">
+    restore_deleted
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view" class="md-nav__link">
+    view
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_thumbnail" class="md-nav__link">
+    set_thumbnail
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_title" class="md-nav__link">
+    title
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_instructions" class="md-nav__link">
+    set_instructions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_description" class="md-nav__link">
+    set_description
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/CubeyTheCube/scratchclient/edit/master/docs/reference/Project.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="project"><strong>Project</strong><a class="headerlink" href="#project" title="Permanent link">&para;</a></h1>
+<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
+<h3 id="id"><code class="highlight"><span class="nb">id</span> <span class="p">:</span> <span class="nb">int</span></code><a class="headerlink" href="#id" title="Permanent link">&para;</a></h3>
+<p>The ID of the project.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="mi">104</span><span class="p">)</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="c1"># 104</span>
+</code></pre></div>
+<h3 id="title"><code class="highlight"><span class="n">title</span> <span class="p">:</span> <span class="nb">str</span></code><a class="headerlink" href="#title" title="Permanent link">&para;</a></h3>
+<p>The title of the project.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="mi">104</span><span class="p">)</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+<span class="c1"># Weekend</span>
+</code></pre></div>
+<h3 id="instructions"><code class="highlight"><span class="n">instructions</span> <span class="p">:</span> <span class="nb">str</span></code><a class="headerlink" href="#instructions" title="Permanent link">&para;</a></h3>
+<p>The instructions of the project.</p>
+<h3 id="description"><code class="highlight"><span class="n">description</span> <span class="p">:</span> <span class="nb">str</span></code><a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
+<p>The description of the project (the "Notes and Credits" field).</p>
+<h3 id="visible"><code class="highlight"><span class="n">visible</span> <span class="p">:</span> <span class="nb">bool</span></code><a class="headerlink" href="#visible" title="Permanent link">&para;</a></h3>
+<p>A boolean value representing whether the project is deleted or not.</p>
+<h3 id="public"><code class="highlight"><span class="n">public</span> <span class="p">:</span> <span class="nb">bool</span></code><a class="headerlink" href="#public" title="Permanent link">&para;</a></h3>
+<p>A boolean value representing whether the project is shared or not.</p>
+<h3 id="comments_allowed"><code class="highlight"><span class="n">comments_allowed</span> <span class="p">:</span> <span class="nb">bool</span></code><a class="headerlink" href="#comments_allowed" title="Permanent link">&para;</a></h3>
+<p>A boolean value representing if comments are allowed on the project.</p>
+<h3 id="is_published"><code class="highlight"><span class="n">is_published</span> <span class="p">:</span> <span class="nb">bool</span></code><a class="headerlink" href="#is_published" title="Permanent link">&para;</a></h3>
+<p>A boolean value representing whether the project has been shared or not.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>I'm not all too sure about the difference between <code class="highlight"><span class="n">public</span></code> and <code class="highlight"><span class="n">is_published</span></code>, but I believe the difference is that projects that have <code class="highlight"><span class="n">is_published</span></code> as <code class="highlight"><span class="kc">True</span></code> could be unshared, but taken down by the Scratch Team, whereas <code class="highlight"><span class="n">public</span></code> projects must be visible to everyone.</p>
+</div>
+<h3 id="author"><code class="highlight"><span class="n">author</span> <span class="p">:</span> <span class="n">IncompleteUser</span></code><a class="headerlink" href="#author" title="Permanent link">&para;</a></h3>
+<p>The author of the project as an <a href="../IncompleteUser">IncompleteUser</a> object.</p>
+<h3 id="thumbnail_URL"><code class="highlight"><span class="n">thumbnail_URL</span> <span class="p">:</span> <span class="nb">str</span></code><a class="headerlink" href="#thumbnail_URL" title="Permanent link">&para;</a></h3>
+<p>The URL of the thumbnail of the project.</p>
+<h3 id="created_timestamp"><code class="highlight"><span class="n">created_timestamp</span> <span class="p">:</span> <span class="nb">str</span></code><a class="headerlink" href="#created_timestamp" title="Permanent link">&para;</a></h3>
+<p>An <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> timestamp representing the date the project was created.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="k">def</span> <span class="nf">iso_to_readable</span><span class="p">(</span><span class="n">iso</span><span class="p">):</span>
+    <span class="n">timezone</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span><span class="o">.</span><span class="n">astimezone</span><span class="p">()</span><span class="o">.</span><span class="n">tzinfo</span>
+
+    <span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span><span class="n">iso</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Z&quot;</span><span class="p">,</span> <span class="s2">&quot;+00:00&quot;</span><span class="p">))</span>
+    <span class="n">date</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">timezone</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2"> %I:%M %p&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">iso_to_readable</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="mi">104</span><span class="p">)</span><span class="o">.</span><span class="n">created_timestamp</span><span class="p">))</span>
+<span class="c1"># 2007-03-05 10:47 AM</span>
+</code></pre></div>
+<h3 id="last_modified_timestamp"><code class="highlight"><span class="n">last_modified_timestamp</span> <span class="p">:</span> <span class="nb">str</span></code><a class="headerlink" href="#last_modified_timestamp" title="Permanent link">&para;</a></h3>
+<p>An <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> timestamp representing the date the project was most recently modified.</p>
+<h3 id="shared_timestamp"><code class="highlight"><span class="n">shared_timestamp</span> <span class="p">:</span> <span class="nb">str</span></code><a class="headerlink" href="#shared_timestamp" title="Permanent link">&para;</a></h3>
+<p>An <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> timestamp representing the date the project was shared.</p>
+<h3 id="view_count"><code class="highlight"><span class="n">view_count</span> <span class="p">:</span> <span class="nb">int</span></code><a class="headerlink" href="#view_count" title="Permanent link">&para;</a></h3>
+<p>The number of views the project has.</p>
+<h3 id="love_count"><code class="highlight"><span class="n">love_count</span> <span class="p">:</span> <span class="nb">int</span></code><a class="headerlink" href="#love_count" title="Permanent link">&para;</a></h3>
+<p>The number of loves (hearts) the project has.</p>
+<h3 id="favorite_count"><code class="highlight"><span class="n">favorite_count</span> <span class="p">:</span> <span class="nb">int</span></code><a class="headerlink" href="#favorite_count" title="Permanent link">&para;</a></h3>
+<p>The number of favorites (stars) the project has.</p>
+<h3 id="remix_count"><code class="highlight"><span class="n">remix_count</span> <span class="p">:</span> <span class="nb">int</span></code><a class="headerlink" href="#remix_count" title="Permanent link">&para;</a></h3>
+<p>The number of remixes the project has.</p>
+<h3 id="parent"><code class="highlight"><span class="n">parent</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span></code><a class="headerlink" href="#parent" title="Permanent link">&para;</a></h3>
+<p>If the project is a remix, this is the project ID of the immediate parent of the project (the project it was remixed from). Otherwise, this is <code class="highlight"><span class="kc">None</span></code>.</p>
+<h3 id="root"><code class="highlight"><span class="n">root</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span></code><a class="headerlink" href="#root" title="Permanent link">&para;</a></h3>
+<p>If the project is a remix, this is the project ID of the root project of the project (the original project it was remixed from). Otherwise, this is <code class="highlight"><span class="kc">None</span></code>.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">project</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="mi">149159110</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Based on project </span><span class="si">{</span><span class="n">project</span><span class="o">.</span><span class="n">parent</span><span class="si">}</span><span class="s2">.</span>
+<span class="s2">Thanks to the original project </span><span class="si">{</span><span class="n">project</span><span class="o">.</span><span class="n">root</span><span class="si">}</span><span class="s2">.</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="is_remix"><code class="highlight"><span class="n">is_remix</span> <span class="p">:</span> <span class="nb">bool</span> <span class="o">|</span> <span class="kc">None</span></code><a class="headerlink" href="#is_remix" title="Permanent link">&para;</a></h3>
+<p>A boolean value representing whether the project is a remix.</p>
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<h3 id="get_comment"><code class="highlight"><span class="n">get_comment</span><span class="p">(</span><span class="n">comment_id</span><span class="p">)</span></code><a class="headerlink" href="#get_comment" title="Permanent link">&para;</a></h3>
+<p>Gets a comment on the project with the ID <code class="highlight"><span class="n">comment_id</span></code> as a <a href="../ProjectComment">ProjectComment</a> object.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>comment_id</strong> (<code class="highlight"><span class="nb">int</span></code>) - The comment ID of the comment to be retrieved</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="n">ProjectComment</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="mi">104</span><span class="p">)</span><span class="o">.</span><span class="n">get_comment</span><span class="p">(</span><span class="mi">488</span><span class="p">)</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+<span class="c1"># I personally like it fuzz</span>
+</code></pre></div>
+<h3 id="love"><code class="highlight"><span class="n">love</span><span class="p">()</span></code><a class="headerlink" href="#love" title="Permanent link">&para;</a></h3>
+<p>Loves the project. Returns a <code class="highlight"><span class="nb">bool</span></code> representing whether the user has loved the project.</p>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">bool</span></code></p>
+<h3 id="unlove"><code class="highlight"><span class="n">unlove</span><span class="p">()</span></code><a class="headerlink" href="#unlove" title="Permanent link">&para;</a></h3>
+<p>Unloves the project. Returns a <code class="highlight"><span class="nb">bool</span></code> representing whether the user has loved the project.</p>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">bool</span></code></p>
+<h3 id="favorite"><code class="highlight"><span class="n">favorite</span><span class="p">()</span></code><a class="headerlink" href="#favorite" title="Permanent link">&para;</a></h3>
+<p>Favorites the project. Returns a <code class="highlight"><span class="nb">bool</span></code> representing whether the user has favorited the project.</p>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">bool</span></code></p>
+<h3 id="unfavorite"><code class="highlight"><span class="n">unfavorite</span><span class="p">()</span></code><a class="headerlink" href="#unfavorite" title="Permanent link">&para;</a></h3>
+<p>Unfavorites the project. Returns a <code class="highlight"><span class="nb">bool</span></code> representing whether the user has favorited the project.</p>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">bool</span></code></p>
+<h3 id="get_scripts"><code class="highlight"><span class="n">get_scripts</span><span class="p">()</span></code><a class="headerlink" href="#get_scripts" title="Permanent link">&para;</a></h3>
+<p>Gets the scripts in the project, as a <code class="highlight"><span class="nb">dict</span></code> with the same structure as the <code>project.json</code> file found in projects.</p>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">dict</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">scripts</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="mi">104</span><span class="p">)</span><span class="o">.</span><span class="n">get_scripts</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The first sprite is called &#39;</span><span class="si">{</span><span class="n">scripts</span><span class="p">[</span><span class="s1">&#39;targets&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+<span class="c1"># The first sprite is called &#39;girl&#39;</span>
+</code></pre></div>
+<h3 id="save"><code class="highlight"><span class="n">save</span><span class="p">(</span><span class="n">project</span><span class="p">)</span></code><a class="headerlink" href="#save" title="Permanent link">&para;</a></h3>
+<p>Saves the project with the scripts specified in the parameter <code class="highlight"><span class="n">project</span></code>.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>project</strong> (<code class="highlight"><span class="nb">dict</span></code>) - The scripts to be put in the project, with the same format as the <code>project.json</code> file found in ordinary projects.</li>
+</ul>
+<h3 id="get_remixes"><code class="highlight"><span class="n">get_remixes</span><span class="p">(</span><span class="nb">all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code><a class="headerlink" href="#get_remixes" title="Permanent link">&para;</a></h3>
+<p>Gets a list of remixes of the project. Returns an array of <a href="../Project">Project</a> objects.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>all</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span></code>) - Whether to retrieve every single remix or just <code class="highlight"><span class="n">limit</span></code> remixes.</li>
+<li><strong>limit</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>) - How many remixes to retrieve if <code class="highlight"><span class="nb">all</span></code> is <code class="highlight"><span class="kc">False</span></code>.</li>
+<li><strong>offset</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>) -  The offset of the remixes from the newest ones - i.e. an offset of 20 would give you the next 20 remixes after the first 20.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">list</span><span class="p">[</span><span class="n">Project</span><span class="p">]</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="mi">10128407</span><span class="p">)</span><span class="o">.</span><span class="n">get_remixes</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+<span class="c1"># Paper Minecraft 3D</span>
+</code></pre></div>
+<h3 id="get_studios"><code class="highlight"><span class="n">get_studios</span><span class="p">(</span><span class="nb">all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code><a class="headerlink" href="#get_studios" title="Permanent link">&para;</a></h3>
+<p>Gets a list of studios the project is in. Returns an array of <a href="../Studio">Studio</a> objects.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>all</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span></code>) - Whether to retrieve every single studio or just <code class="highlight"><span class="n">limit</span></code> studios.</li>
+<li><strong>limit</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>) - How many studios to retrieve if <code class="highlight"><span class="nb">all</span></code> is <code class="highlight"><span class="kc">False</span></code>.</li>
+<li><strong>offset</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>) -  The offset of the studios from the newest ones - i.e. an offset of 20 would give you the next 20 studios after the first 20.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">list</span><span class="p">[</span><span class="n">Studio</span><span class="p">]</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="mi">10128407</span><span class="p">)</span><span class="o">.</span><span class="n">get_studios</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+<span class="c1"># Griffpatch&#39;s epic games!!</span>
+</code></pre></div>
+<h3 id="get_remixtree"><code class="highlight"><span class="n">get_remixtree</span><span class="p">()</span></code><a class="headerlink" href="#get_remixtree" title="Permanent link">&para;</a></h3>
+<p>Gets the data in the tree of remixes of the project. This data is used to construct the <code>remixtree</code> page (<a href="https://scratch.mit.edu/projects/104/remixtree/">this</a> is an example) Returns an array of <a href="../RemixtreeProject">RemixtreeProject</a> objects, which is a list of the projects in the tree.</p>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">list</span><span class="p">[</span><span class="n">RemixtreeProject</span><span class="p">]</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="mi">104</span><span class="p">)</span><span class="o">.</span><span class="n">get_remixtree</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+<span class="c1"># Weekend Remake</span>
+</code></pre></div>
+<h3 id="get_comments"><code class="highlight"><span class="n">get_comments</span><span class="p">(</span><span class="nb">all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code><a class="headerlink" href="#get_comments" title="Permanent link">&para;</a></h3>
+<p>Gets a list of comments on the project. Returns an array of <a href="../ProjectComment">ProjectComment</a> objects.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>all</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span></code>) - Whether to retrieve every single comment or just <code class="highlight"><span class="n">limit</span></code> comments.</li>
+<li><strong>limit</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>) - How many comments to retrieve if <code class="highlight"><span class="nb">all</span></code> is <code class="highlight"><span class="kc">False</span></code>.</li>
+<li><strong>offset</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>) -  The offset of the comments from the newest ones - i.e. an offset of 20 would give you the next 20 comments after the first 20.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">list</span><span class="p">[</span><span class="n">ProjectComment</span><span class="p">]</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="mi">10128407</span><span class="p">)</span><span class="o">.</span><span class="n">get_comments</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+<span class="c1"># follow me please</span>
+</code></pre></div>
+<h3 id="get_cloud_logs"><code class="highlight"><span class="n">get_cloud_logs</span><span class="p">(</span><span class="nb">all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code><a class="headerlink" href="#get_cloud_logs" title="Permanent link">&para;</a></h3>
+<p>Gets the cloud logs on the project. Returns an array of <code class="highlight"><span class="nb">dict</span></code>s containing the logs.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>all</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span></code>) - Whether to retrieve every single log or just <code class="highlight"><span class="n">limit</span></code> logs.</li>
+<li><strong>limit</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>) - How many logs to retrieve if <code class="highlight"><span class="nb">all</span></code> is <code class="highlight"><span class="kc">False</span></code>.</li>
+<li><strong>offset</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>) -  The offset of the logs from the newest ones - i.e. an offset of 20 would give you the next 20 logs after the first 20.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="mi">12785898</span><span class="p">)</span><span class="o">.</span><span class="n">get_cloud_logs</span><span class="p">()[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;verb&quot;</span><span class="p">])</span>
+<span class="c1"># set_var</span>
+</code></pre></div>
+<h3 id="post_comment"><code class="highlight"><span class="n">post_comment</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">parent_id</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">commentee_id</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span></code><a class="headerlink" href="#post_comment" title="Permanent link">&para;</a></h3>
+<p>Posts a comment on the project. You must be logged in for this to not throw an error. Returns the posted comment as a <code class="highlight"><span class="n">ProjectComment</span></code>.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>content</strong> (<code class="highlight"><span class="nb">str</span></code>) - The content of the comment to be posted.</li>
+<li><strong>parent_id</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="nb">int</span><span class="p">]</span></code>) - If the comment to be posted is a reply, this is the comment ID of the parent comment. Otherwise, this is an empty string <code class="highlight"><span class="s2">&quot;&quot;</span></code>.</li>
+<li><strong>commentee_id</strong> (<code class="highlight"><span class="n">Optiona</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]</span> <span class="o">|</span> <span class="nb">int</span><span class="p">]</span></code>) - If the comment to be posted is a reply, this is the user ID of the author of the parent comment. Otherwise, this an empty string <code class="highlight"><span class="s2">&quot;&quot;</span></code>.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="n">ProjectComment</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">session</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="mi">104</span><span class="p">)</span><span class="o">.</span><span class="n">post_comment</span><span class="p">(</span><span class="s2">&quot;OMG first project on Scratch&quot;</span><span class="p">)</span>
+<span class="n">session</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="mi">104</span><span class="p">)</span><span class="o">.</span><span class="n">post_comment</span><span class="p">(</span><span class="s2">&quot;OMG first comment on the first project on scratch&quot;</span><span class="p">,</span> <span class="n">parent_id</span><span class="o">=</span><span class="mi">488</span><span class="p">,</span> <span class="n">commentee_id</span><span class="o">=</span><span class="mi">6493</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="get_visibility"><code class="highlight"><span class="n">get_visibility</span><span class="p">()</span></code><a class="headerlink" href="#get_visibility" title="Permanent link">&para;</a></h3>
+<p>Gets the visibility and moderation status of the project. You must be logged in and the owner of the project for this to not throw an error. Returns the data as a <code class="highlight"><span class="nb">dict</span></code>, with the following items:</p>
+<ul>
+<li><strong>projectId</strong> - The ID of the project (an <code class="highlight"><span class="nb">int</span></code>).</li>
+<li><strong>creatorId</strong> - The user ID of the creator of the project (an <code class="highlight"><span class="nb">int</span></code>).</li>
+<li><strong>deleted</strong> - Whether or not the project is deleted (a <code class="highlight"><span class="nb">bool</span></code>).</li>
+<li><strong>censored</strong> - Whether the project was censored -- this could either be automatically or by the Scratch Team (a <code class="highlight"><span class="nb">bool</span></code>).</li>
+<li><strong>censoredByAdmin</strong> - Whether the project was censored by the Scratch Team (a <code class="highlight"><span class="nb">bool</span></code>).</li>
+<li><strong>censoredByCommunity</strong> - Whether the project was censored automatically by community reports (a <code class="highlight"><span class="nb">bool</span></code>).</li>
+<li><strong>reshareable</strong> - Whether the project can be reshared (a <code class="highlight"><span class="nb">bool</span></code>).</li>
+<li><strong>message</strong> - If the project was censored, this is the message from the Scratch Team containing the reason why the project was censored. Otherwise, this is an empty string <code class="highlight"><span class="s2">&quot;&quot;</span></code>.</li>
+</ul>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="nb">dict</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="mi">391293821809312</span><span class="p">)</span><span class="o">.</span><span class="n">get_visibility</span><span class="p">()[</span><span class="s2">&quot;censoredByAdmin&quot;</span><span class="p">])</span>
+<span class="c1"># True</span>
+</code></pre></div>
+<h3 id="toggle_comments"><code class="highlight"><span class="n">toggle_commenting</span><span class="p">()</span></code><a class="headerlink" href="#toggle_comments" title="Permanent link">&para;</a></h3>
+<p>Toggles whether people can post comments on the project. You must be logged in, and the owner of the project, for this to not throw an error. Returns the project.</p>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="n">Project</span></code></p>
+<h3 id="turn_on_commenting"><code class="highlight"><span class="n">turn_on_commenting</span><span class="p">()</span></code><a class="headerlink" href="#turn_on_commenting" title="Permanent link">&para;</a></h3>
+<p>Enables commenting on the project. You must be logged in, and the owner of the project, for this to not throw an error. Returns the project.</p>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="n">Project</span></code></p>
+<h3 id="turn_off_commenting"><code class="highlight"><span class="n">turn_off_commenting</span><span class="p">()</span></code><a class="headerlink" href="#turn_off_commenting" title="Permanent link">&para;</a></h3>
+<p>Disables commenting on the project. You must be logged in, and the owner of the project, for this to not throw an error. Returns the project.</p>
+<p><strong>RETURNS</strong> - <code class="highlight"><span class="n">Project</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">project</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="mi">19032190120</span><span class="p">)</span>
+<span class="n">project</span><span class="o">.</span><span class="n">post_comment</span><span class="p">(</span><span class="s2">&quot;Closing comments until this project gets 100 loves&quot;</span><span class="p">)</span>
+<span class="n">project</span><span class="o">.</span><span class="n">turn_off_commenting</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="report"><code class="highlight"><span class="n">report</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="n">reason</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code><a class="headerlink" href="#report" title="Permanent link">&para;</a></h3>
+<p>Reports the project, for the specified <code class="highlight"><span class="n">category</span></code> and <code class="highlight"><span class="n">reason</span></code>. You must be logged in for this to not throw an error.</p>
+<p><strong>PARAMETERS</strong></p>
+<ul>
+<li><strong>category</strong> (<code class="highlight"><span class="nb">str</span></code>) - The category of reasons that the rules were broken with the project. Possible valid values are the following:<ul>
+<li><code class="highlight"><span class="s2">&quot;0&quot;</span></code> - The project is an exact copy of another project.</li>
+<li><code class="highlight"><span class="s2">&quot;1&quot;</span></code> - The project uses images or music without credit.</li>
+<li><code class="highlight"><span class="s2">&quot;3&quot;</span></code> - The project contains inappropriate language.</li>
+<li><code class="highlight"><span class="s2">&quot;4&quot;</span></code> - The project contains inappropriate music.</li>
+<li><code class="highlight"><span class="s2">&quot;5&quot;</span></code> - The project shares personal contact information.</li>
+<li><code class="highlight"><span class="s2">&quot;8&quot;</span></code> - The project contains inappropriate images.</li>
+<li><code class="highlight"><span class="s2">&quot;9&quot;</span></code> - The project is misleading or tricks the community.</li>
+<li><code class="highlight"><span class="s2">&quot;10&quot;</span></code> - The project contains a face reveal.</li>
+<li><code class="highlight"><span class="s2">&quot;11&quot;</span></code> - The project disallows remixing.</li>
+<li><code class="highlight"><span class="s2">&quot;12&quot;</span></code> - You are concerned about the creator's safety.</li>
+<li><code class="highlight"><span class="s2">&quot;13&quot;</span></code> - Some other reason.</li>
+<li><code class="highlight"><span class="s2">&quot;14&quot;</span></code> - The project contains scary images.</li>
+<li><code class="highlight"><span class="s2">&quot;15&quot;</span></code> - The project has a jumpscare.</li>
+<li><code class="highlight"><span class="s2">&quot;16&quot;</span></code> - The project contains a violent event.</li>
+<li><code class="highlight"><span class="s2">&quot;17&quot;</span></code> - The project contains realistic weapons.</li>
+<li><code class="highlight"><span class="s2">&quot;18&quot;</span></code> - The project threatens or bullies another Scratcher.</li>
+<li><code class="highlight"><span class="s2">&quot;19&quot;</span></code> - The project is disrespectful to a Scratcher or group.</li>
+</ul>
+</li>
+<li><strong>reason</strong> (<code class="highlight"><span class="nb">str</span></code>) - Additional info regarding the location of the offending content within the project.</li>
+<li><strong>image</strong> (<code class="highlight"><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span></code>) - The base-64-encoded thumbnail of the project.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">session</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="mi">104</span><span class="p">)</span><span class="o">.</span><span class="n">report</span><span class="p">(</span><span class="s2">&quot;10&quot;</span><span class="p">,</span> <span class="s2">&quot;the guy&#39;s face is in the project&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="unshare"><code class="highlight"><span class="n">unshare</span><span class="p">()</span></code><a class="headerlink" href="#unshare" title="Permanent link">&para;</a></h3>
+<p>Unshares the project. You must be logged in, and the owner of the project, for this to not throw an error.</p>
+<h3 id="share"><code class="highlight"><span class="n">share</span><span class="p">()</span></code><a class="headerlink" href="#share" title="Permanent link">&para;</a></h3>
+<p>Shares the project. You must be logged in, and the owner of the project, for this to not throw an error.</p>
+<h3 id="delete"><code class="highlight"><span class="n">delete</span><span class="p">()</span></code><a class="headerlink" href="#delete" title="Permanent link">&para;</a></h3>
+<p>Deletes the project. You must be logged in, and the owner of the project, for this to not throw an error.</p>
+<h3 id="restore_deleted"><code class="highlight"><span class="n">restore_deleted</span><span class="p">()</span></code><a class="headerlink" href="#restore_deleted" title="Permanent link">&para;</a></h3>
+<p>Restores the project if it has been deleted. You must be logged in, and the owner of the project, for this to not throw an error.</p>
+<h3 id="view"><code class="highlight"><span class="n">view</span><span class="p">()</span></code><a class="headerlink" href="#view" title="Permanent link">&para;</a></h3>
+<p>Views the project (increments its view count).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is incredibly easy to abuse, but do not as the Scratch Team will not be happy, and they will be able to figure out who you are. Furthermore, this is heavily ratelimited, so it's not very effective anyway.</p>
+</div>
+<h3 id="set_thumbnail"><code class="highlight"><span class="n">set_thumbnail</span><span class="p">(</span><span class="n">file_or_data</span><span class="p">)</span></code><a class="headerlink" href="#set_thumbnail" title="Permanent link">&para;</a></h3>
+<p>Sets the thumbnail of the project. You must be logged in, and the owner of the project, for this to not throw an error.</p>
+<p><strong>PARAMETERS</strong></p>
+<p><strong>file_or_data</strong> (<code class="highlight"><span class="nb">bytes</span> <span class="o">|</span> <span class="nb">str</span></code>) - The file that the thumbnail should be set to. If this is a <code class="highlight"><span class="nb">str</span></code>, then it will be interpreted as a path to a file; otherwise, it will be interpreted as the data in the image.</p>
+<h3 id="set_title"><code class="highlight"><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span></code><a class="headerlink" href="#set_title" title="Permanent link">&para;</a></h3>
+<p>Sets the title of the project. You must be logged in, and the owner of the project, for this to not throw an error.</p>
+<p><strong>PARAMETERS</strong></p>
+<p><strong>title</strong> (<code class="highlight"><span class="nb">str</span></code>) - The title that the title of the project should be set to.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">session</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="mi">130921903123</span><span class="p">)</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;4D platformer #games #all ?mode=trending&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="set_instructions"><code class="highlight"><span class="n">set_instructions</span><span class="p">(</span><span class="n">instructions</span><span class="p">)</span></code><a class="headerlink" href="#set_instructions" title="Permanent link">&para;</a></h3>
+<p>Sets the instructions of the project. You must be logged in, and the owner of the project, for this to not throw an error.</p>
+<p><strong>PARAMETERS</strong></p>
+<p><strong>instructions</strong> (<code class="highlight"><span class="nb">str</span></code>) - The instructions that the instructions of the project should be set to.</p>
+<h3 id="set_description"><code class="highlight"><span class="n">set_description</span><span class="p">(</span><span class="n">description</span><span class="p">)</span></code><a class="headerlink" href="#set_description" title="Permanent link">&para;</a></h3>
+<p>Sets the description (the "Notes and Credits" field) of the project.</p>
+<p><strong>PARAMETERS</strong></p>
+<p><strong>description</strong> (<code class="highlight"><span class="nb">str</span></code>) - The description that the description of the project should be set to. You must be logged in, and the owner of the project, for this to not throw an error.</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../User/" class="md-footer__link md-footer__link--prev" aria-label="Previous: User" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              User
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Studio/" class="md-footer__link md-footer__link--next" aria-label="Next: Studio" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Studio
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>
