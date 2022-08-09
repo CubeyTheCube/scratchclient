@@ -14,6 +14,7 @@ theme:
 
 nav:
   - Home: 'index.md'
+  - Usage on Replit: 'replit.md'
   - 'Examples':
     - 'Basic Usage': 'examples/basic-usage.md'
     - 'Stats Viewer': 'examples/stats-viewer.md'

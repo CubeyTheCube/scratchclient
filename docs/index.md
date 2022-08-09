@@ -2,6 +2,20 @@
 
 This is the documentation for scratchclient.
 
+## Installation
+
+Go to your terminal (not your python shell) and execute this command:
+```bash
+pip install scratchclient
+```
+
+If this didn't work for whatever reason, open your python shell and run the following:
+```python
+import os; os.system("pip install scratchclient")
+```
+
+scratchclient requires Python 3.7; however, it will work for almost all use cases on Python 3.6.
+
 ## Get Started
 ```python
 from scratchclient import ScratchSession
