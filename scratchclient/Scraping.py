@@ -41,8 +41,7 @@ class ActivityParser(HTMLParser):
             self.current_attrib = "link"
 
             if self.id:
-                self.second_id = re.search(
-                    "\d+", get_attr(attrs, "href")).group()
+                self.second_id = re.search("\d+", get_attr(attrs, "href")).group()
                 return
 
             possible_id = re.search("\d+", get_attr(attrs, "href"))
@@ -115,8 +114,7 @@ class ActivityParser(HTMLParser):
 
             self.current_activity["type"] = activity_type
         elif self.current_attrib == "time":
-            self.current_activity["datetime_created"] = self.parse_relative_date(
-                data)
+            self.current_activity["datetime_created"] = self.parse_relative_date(data)
         elif self.last_attrib == "actor":
             self.message = data.strip()
 
@@ -178,8 +176,7 @@ class ProfileCommentsParser(HTMLParser):
     def handle_starttag(self, tag, attrs):
         if self.current_attr == "content":
             self.current_comments[0]["content"] += str.format(
-                "<{0} {1}>", tag, " ".join(
-                    f'{key}="{value}"' for key, value in attrs)
+                "<{0} {1}>", tag, " ".join(f'{key}="{value}"' for key, value in attrs)
             )
 
             return
@@ -204,18 +201,15 @@ class ProfileCommentsParser(HTMLParser):
             )
         elif tag == "div":
             if current_class == "comment ":
-                self.current_comments[0]["id"] = int(
-                    get_attr(attrs, "data-comment-id"))
+                self.current_comments[0]["id"] = int(get_attr(attrs, "data-comment-id"))
             elif current_class == "name":
                 self.current_attr = "name"
             elif current_class == "content":
                 self.current_attr = "content"
                 self.current_comments[0]["content"] = ""
         elif tag == "span" and current_class == "time":
-            self.current_comments[0]["datetime_created"] = get_attr(
-                attrs, "title")
-            self.current_comments[0]["datetime_modified"] = get_attr(
-                attrs, "title")
+            self.current_comments[0]["datetime_created"] = get_attr(attrs, "title")
+            self.current_comments[0]["datetime_modified"] = get_attr(attrs, "title")
         elif tag == "a":
             if get_attr(attrs, "id") == "comment-user":
                 self.current_comments[0]["author"]["username"] = get_attr(
@@ -231,8 +225,7 @@ class ProfileCommentsParser(HTMLParser):
 
     def handle_data(self, data):
         if self.current_attr == "name":
-            self.current_comments[0]["author"]["scratchteam"] = data.endswith(
-                "*")
+            self.current_comments[0]["author"]["scratchteam"] = data.endswith("*")
         elif self.current_attr == "content":
             self.current_comments[0]["content"] += html.escape(data).replace(
                 "&#x27;", "&apos;"
@@ -245,13 +238,11 @@ class ProfileCommentsParser(HTMLParser):
             )
             if self.current_comments[0]["parent_id"] == None:
                 self.comments.append(
-                    ProfileComment(
-                        self.current_comments[0], self._user, self._client)
+                    ProfileComment(self.current_comments[0], self._user, self._client)
                 )
             else:
                 self.current_comments[-1]["replies"].append(
-                    ProfileComment(
-                        self.current_comments[0], self._user, self._client)
+                    ProfileComment(self.current_comments[0], self._user, self._client)
                 )
             self.current_comments.pop(0)
 
@@ -281,8 +272,7 @@ class SignatureParser(HTMLParser):
 
         if self.in_signature > 0:
             self.signature += str.format(
-                "<{0} {1}>", tag, " ".join(
-                    f'{key}="{value}"' for key, value in attrs)
+                "<{0} {1}>", tag, " ".join(f'{key}="{value}"' for key, value in attrs)
             )
             if not tag in ("br", "hr"):
                 self.in_signature += 1
@@ -352,11 +342,9 @@ class HTMLToBBCodeParser(HTMLParser):
             current_class = get_attr(attrs, "class")
             if current_class and current_class.startswith("bb-"):
                 self.bbcode += f"[{self.formats[current_class[3:]]}]"
-                self.close_tags.insert(
-                    0, f"[/{self.formats[current_class[3:]]}]")
+                self.close_tags.insert(0, f"[/{self.formats[current_class[3:]]}]")
             elif get_attr(attrs, "style"):
-                color = re.match(
-                    "color:(.*)$", get_attr(attrs, "style")).groups()[0]
+                color = re.match("color:(.*)$", get_attr(attrs, "style")).groups()[0]
                 if color.startswith("rgb"):
                     color = self.rgb_to_hex(rgb)
 
@@ -414,30 +402,27 @@ class HTMLToBBCodeParser(HTMLParser):
 # For lack of a better name
 class ScrapingSession:
     def __init__(self, client):
+        self._headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36."}
         self._client = client
-        self.headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36."
-        }
 
     def get_follower_count(self, user):
         username = user if isinstance(user, str) else user.username
-        page = requests.get(
-            f"https://scratch.mit.edu/users/{username}/followers/", headers=self.headers).text
+
+        page = requests.get(f"https://scratch.mit.edu/users/{username}/followers/", headers=self._headers).text
+
         return re.search("&raquo;\s+Followers\s+\((\d+)\)", page).groups()[0]
 
     def get_following_count(self, user):
         username = user if isinstance(user, str) else user.username
 
-        page = requests.get(
-            f"https://scratch.mit.edu/users/{username}/following/").text
+        page = requests.get(f"https://scratch.mit.edu/users/{username}/following/", headers=self._headers).text
 
         return re.search("&raquo;\s+Following\s+\((\d+)\)", page).groups()[0]
 
     def get_favorited_count(self, user):
         username = user if isinstance(user, str) else user.username
 
-        page = requests.get(
-            f"https://scratch.mit.edu/users/{username}/favorites/").text
+        page = requests.get(f"https://scratch.mit.edu/users/{username}/favorites/", headers=self._headers).text
 
         return re.search("&raquo;\s+Favorites\s+\((\d+)\)", page).groups()[0]
 
@@ -445,7 +430,8 @@ class ScrapingSession:
         username = user if isinstance(user, str) else user.username
 
         page = requests.get(
-            f"https://scratch.mit.edu/users/{username}/studios_following/"
+            f"https://scratch.mit.edu/users/{username}/studios_following/",
+            headers=self._headers
         ).text
 
         return re.search("&raquo;\s+Studios I Follow\s+\((\d+)\)", page).groups()[0]
@@ -453,16 +439,14 @@ class ScrapingSession:
     def get_curated_studios_count(self, user):
         username = user if isinstance(user, str) else user.username
 
-        page = requests.get(
-            f"https://scratch.mit.edu/users/{username}/studios/").text
+        page = requests.get(f"https://scratch.mit.edu/users/{username}/studios/", headers=self._headers).text
 
         return re.search("&raquo;\s+Studios I Curate\s+\((\d+)\)", page).groups()[0]
 
     def get_shared_projects_count(self, user):
         username = user if isinstance(user, str) else user.username
 
-        page = requests.get(
-            f"https://scratch.mit.edu/users/{username}/projects/").text
+        page = requests.get(f"https://scratch.mit.edu/users/{username}/projects/", headers=self._headers).text
 
         return re.search("&raquo;\s+Shared Projects\s+\((\d+)\)", page).groups()[0]
 
@@ -470,7 +454,8 @@ class ScrapingSession:
         username = user if isinstance(user, str) else user.username
 
         page = requests.get(
-            f"https://scratch.mit.edu/messages/ajax/user-activity/?user={username}&max={max}"
+            f"https://scratch.mit.edu/messages/ajax/user-activity/?user={username}&max={max}", 
+            headers=self._headers
         ).text
         parser = ActivityParser()
         parser.feed(page)
@@ -485,7 +470,8 @@ class ScrapingSession:
 
             while True:
                 response = requests.get(
-                    f"https://scratch.mit.edu/site-api/comments/user/{username}/?page={page}"
+                    f"https://scratch.mit.edu/site-api/comments/user/{username}/?page={page}", 
+                    headers=self._headers
                 )
 
                 if response.status_code == 404 or "<li" not in response.text:
@@ -499,7 +485,8 @@ class ScrapingSession:
                 page += 1
 
         page_content = requests.get(
-            f"https://scratch.mit.edu/site-api/comments/user/{username}/?page={page}"
+            f"https://scratch.mit.edu/site-api/comments/user/{username}/?page={page}",
+            headers=self._headers
         ).text
         parser = ProfileCommentsParser(username, self._client)
         parser.feed(page_content)
@@ -508,7 +495,8 @@ class ScrapingSession:
 
     def get_signature(self, post_id, as_html=False):
         page_content = requests.get(
-            f"https://scratch.mit.edu/discuss/post/{post_id}/"
+            f"https://scratch.mit.edu/discuss/post/{post_id}/",
+            headers=self._headers
         ).text
         parser = SignatureParser(post_id)
         parser.feed(page_content)
