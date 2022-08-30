@@ -228,6 +228,9 @@ By {post.author}
             print("\n{0}\n".format(separator()))
 
 
+if len(sys.argv) == 1:
+    help()
+    exit()
 command = sys.argv[1]
 if command == "help":
     help()
