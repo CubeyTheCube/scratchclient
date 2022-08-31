@@ -402,7 +402,8 @@ class HTMLToBBCodeParser(HTMLParser):
 # For lack of a better name
 class ScrapingSession:
     def __init__(self, client):
-        self._headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36."}
+        self._headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36."}
         self._client = client
 
     def get_follower_count(self, user):
