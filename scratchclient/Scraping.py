@@ -402,26 +402,29 @@ class HTMLToBBCodeParser(HTMLParser):
 # For lack of a better name
 class ScrapingSession:
     def __init__(self, client):
+        self._headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36."
+        }
         self._client = client
 
     def get_follower_count(self, user):
         username = user if isinstance(user, str) else user.username
 
-        page = requests.get(f"https://scratch.mit.edu/users/{username}/followers/").text
+        page = requests.get(f"https://scratch.mit.edu/users/{username}/followers/", headers=self._headers).text
 
         return re.search("&raquo;\s+Followers\s+\((\d+)\)", page).groups()[0]
 
     def get_following_count(self, user):
         username = user if isinstance(user, str) else user.username
 
-        page = requests.get(f"https://scratch.mit.edu/users/{username}/following/").text
+        page = requests.get(f"https://scratch.mit.edu/users/{username}/following/", headers=self._headers).text
 
         return re.search("&raquo;\s+Following\s+\((\d+)\)", page).groups()[0]
 
     def get_favorited_count(self, user):
         username = user if isinstance(user, str) else user.username
 
-        page = requests.get(f"https://scratch.mit.edu/users/{username}/favorites/").text
+        page = requests.get(f"https://scratch.mit.edu/users/{username}/favorites/", headers=self._headers).text
 
         return re.search("&raquo;\s+Favorites\s+\((\d+)\)", page).groups()[0]
 
@@ -429,7 +432,8 @@ class ScrapingSession:
         username = user if isinstance(user, str) else user.username
 
         page = requests.get(
-            f"https://scratch.mit.edu/users/{username}/studios_following/"
+            f"https://scratch.mit.edu/users/{username}/studios_following/",
+            headers=self._headers
         ).text
 
         return re.search("&raquo;\s+Studios I Follow\s+\((\d+)\)", page).groups()[0]
@@ -437,14 +441,14 @@ class ScrapingSession:
     def get_curated_studios_count(self, user):
         username = user if isinstance(user, str) else user.username
 
-        page = requests.get(f"https://scratch.mit.edu/users/{username}/studios/").text
+        page = requests.get(f"https://scratch.mit.edu/users/{username}/studios/", headers=self._headers).text
 
         return re.search("&raquo;\s+Studios I Curate\s+\((\d+)\)", page).groups()[0]
 
     def get_shared_projects_count(self, user):
         username = user if isinstance(user, str) else user.username
 
-        page = requests.get(f"https://scratch.mit.edu/users/{username}/projects/").text
+        page = requests.get(f"https://scratch.mit.edu/users/{username}/projects/", headers=self._headers).text
 
         return re.search("&raquo;\s+Shared Projects\s+\((\d+)\)", page).groups()[0]
 
@@ -452,7 +456,8 @@ class ScrapingSession:
         username = user if isinstance(user, str) else user.username
 
         page = requests.get(
-            f"https://scratch.mit.edu/messages/ajax/user-activity/?user={username}&max={max}"
+            f"https://scratch.mit.edu/messages/ajax/user-activity/?user={username}&max={max}", 
+            headers=self._headers
         ).text
         parser = ActivityParser()
         parser.feed(page)
@@ -467,7 +472,8 @@ class ScrapingSession:
 
             while True:
                 response = requests.get(
-                    f"https://scratch.mit.edu/site-api/comments/user/{username}/?page={page}"
+                    f"https://scratch.mit.edu/site-api/comments/user/{username}/?page={page}", 
+                    headers=self._headers
                 )
 
                 if response.status_code == 404 or "<li" not in response.text:
@@ -481,7 +487,8 @@ class ScrapingSession:
                 page += 1
 
         page_content = requests.get(
-            f"https://scratch.mit.edu/site-api/comments/user/{username}/?page={page}"
+            f"https://scratch.mit.edu/site-api/comments/user/{username}/?page={page}",
+            headers=self._headers
         ).text
         parser = ProfileCommentsParser(username, self._client)
         parser.feed(page_content)
@@ -490,7 +497,8 @@ class ScrapingSession:
 
     def get_signature(self, post_id, as_html=False):
         page_content = requests.get(
-            f"https://scratch.mit.edu/discuss/post/{post_id}/"
+            f"https://scratch.mit.edu/discuss/post/{post_id}/",
+            headers=self._headers
         ).text
         parser = SignatureParser(post_id)
         parser.feed(page_content)
