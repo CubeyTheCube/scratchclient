@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name="scratchclient",
     packages=["scratchclient"],
-    version="1.0.0",
+    version="1.0.1",
     license="MIT",
     description="A scratch API wrapper for Python.",
     long_description=long_description,
@@ -15,7 +15,7 @@ setup(
     author="CubeyTheCube",
     author_email="turtles142857@gmail.com",
     url="https://github.com/CubeyTheCube/scratchclient",
-    download_url="https://github.com/CubeyTheCube/scratchclient/archive/v_10.0.tar.gz",
+    download_url="https://github.com/CubeyTheCube/scratchclient/archive/v_10.1.tar.gz",
     keywords=["scratch", "api"],
     install_requires=["requests"],
     extras_require={"fast": ["numpy", "wsaccel"]},
